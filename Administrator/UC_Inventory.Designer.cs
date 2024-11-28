@@ -39,13 +39,13 @@
             btnProductList = new Guna.UI2.WinForms.Guna2Button();
             dtgInventory = new DataGridView();
             Product_ID = new DataGridViewTextBoxColumn();
-            ProductName = new DataGridViewTextBoxColumn();
+            Product_Name = new DataGridViewTextBoxColumn();
             Grams = new DataGridViewTextBoxColumn();
             InStocks = new DataGridViewTextBoxColumn();
             Price = new DataGridViewTextBoxColumn();
-            StockStatus = new DataGridViewTextBoxColumn();
-            MfgDate = new DataGridViewTextBoxColumn();
-            ExpDate = new DataGridViewTextBoxColumn();
+            Stock_Status = new DataGridViewTextBoxColumn();
+            Mfg_Date = new DataGridViewTextBoxColumn();
+            Exp_Date = new DataGridViewTextBoxColumn();
             Actions = new DataGridViewTextBoxColumn();
             btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dtgInventory).BeginInit();
@@ -62,12 +62,14 @@
             btnStock.FillColor = Color.Black;
             btnStock.Font = new Font("Segoe UI", 9F);
             btnStock.ForeColor = Color.White;
-            btnStock.Location = new Point(35, 153);
+            btnStock.Location = new Point(31, 115);
+            btnStock.Margin = new Padding(3, 2, 3, 2);
             btnStock.Name = "btnStock";
             btnStock.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnStock.Size = new Size(201, 54);
+            btnStock.Size = new Size(132, 40);
             btnStock.TabIndex = 0;
             btnStock.Text = "Stock";
+            btnStock.Click += btnStock_Click;
             // 
             // btnProductList
             // 
@@ -80,22 +82,25 @@
             btnProductList.FillColor = Color.Black;
             btnProductList.Font = new Font("Segoe UI", 9F);
             btnProductList.ForeColor = Color.White;
-            btnProductList.Location = new Point(242, 153);
+            btnProductList.Location = new Point(169, 116);
+            btnProductList.Margin = new Padding(3, 2, 3, 2);
             btnProductList.Name = "btnProductList";
             btnProductList.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnProductList.Size = new Size(201, 54);
+            btnProductList.Size = new Size(132, 40);
             btnProductList.TabIndex = 1;
             btnProductList.Text = "Product List";
+            btnProductList.Click += btnProductList_Click;
             // 
             // dtgInventory
             // 
             dtgInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgInventory.Columns.AddRange(new DataGridViewColumn[] { Product_ID, ProductName, Grams, InStocks, Price, StockStatus, MfgDate, ExpDate, Actions });
-            dtgInventory.Location = new Point(35, 213);
+            dtgInventory.Columns.AddRange(new DataGridViewColumn[] { Product_ID, Product_Name, Grams, InStocks, Price, Stock_Status, Mfg_Date, Exp_Date, Actions });
+            dtgInventory.Location = new Point(31, 160);
+            dtgInventory.Margin = new Padding(3, 2, 3, 2);
             dtgInventory.Name = "dtgInventory";
             dtgInventory.RowHeadersWidth = 51;
-            dtgInventory.Size = new Size(1507, 720);
+            dtgInventory.Size = new Size(1319, 540);
             dtgInventory.TabIndex = 2;
             // 
             // Product_ID
@@ -104,11 +109,11 @@
             Product_ID.MinimumWidth = 6;
             Product_ID.Name = "Product_ID";
             // 
-            // ProductName
+            // Product_Name
             // 
-            ProductName.HeaderText = "Product_Name";
-            ProductName.MinimumWidth = 6;
-            ProductName.Name = "ProductName";
+            Product_Name.HeaderText = "Product_Name";
+            Product_Name.MinimumWidth = 6;
+            Product_Name.Name = "Product_Name";
             // 
             // Grams
             // 
@@ -128,23 +133,23 @@
             Price.MinimumWidth = 6;
             Price.Name = "Price";
             // 
-            // StockStatus
+            // Stock_Status
             // 
-            StockStatus.HeaderText = "Stock_Status";
-            StockStatus.MinimumWidth = 6;
-            StockStatus.Name = "StockStatus";
+            Stock_Status.HeaderText = "Stock_Status";
+            Stock_Status.MinimumWidth = 6;
+            Stock_Status.Name = "Stock_Status";
             // 
-            // MfgDate
+            // Mfg_Date
             // 
-            MfgDate.HeaderText = "Mfg_Date";
-            MfgDate.MinimumWidth = 6;
-            MfgDate.Name = "MfgDate";
+            Mfg_Date.HeaderText = "Mfg_Date";
+            Mfg_Date.MinimumWidth = 6;
+            Mfg_Date.Name = "Mfg_Date";
             // 
-            // ExpDate
+            // Exp_Date
             // 
-            ExpDate.HeaderText = "Exp_Date";
-            ExpDate.MinimumWidth = 6;
-            ExpDate.Name = "ExpDate";
+            Exp_Date.HeaderText = "Exp_Date";
+            Exp_Date.MinimumWidth = 6;
+            Exp_Date.Name = "Exp_Date";
             // 
             // Actions
             // 
@@ -164,23 +169,25 @@
             btnAddProduct.Font = new Font("Segoe UI", 9F);
             btnAddProduct.ForeColor = Color.White;
             btnAddProduct.Image = (Image)resources.GetObject("btnAddProduct.Image");
-            btnAddProduct.Location = new Point(1372, 153);
+            btnAddProduct.Location = new Point(1225, 115);
+            btnAddProduct.Margin = new Padding(3, 2, 3, 2);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnAddProduct.Size = new Size(170, 54);
+            btnAddProduct.Size = new Size(124, 40);
             btnAddProduct.TabIndex = 3;
             btnAddProduct.Text = "Add Product";
             // 
             // UC_Inventory
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnAddProduct);
             Controls.Add(dtgInventory);
             Controls.Add(btnProductList);
             Controls.Add(btnStock);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Inventory";
-            Size = new Size(1581, 953);
+            Size = new Size(1383, 715);
             ((System.ComponentModel.ISupportInitialize)dtgInventory).EndInit();
             ResumeLayout(false);
         }
@@ -190,15 +197,15 @@
         private Guna.UI2.WinForms.Guna2Button btnStock;
         private Guna.UI2.WinForms.Guna2Button btnProductList;
         private DataGridView dtgInventory;
+        private Guna.UI2.WinForms.Guna2Button btnAddProduct;
         private DataGridViewTextBoxColumn Product_ID;
-        private DataGridViewTextBoxColumn ProductName;
+        private DataGridViewTextBoxColumn Product_Name;
         private DataGridViewTextBoxColumn Grams;
         private DataGridViewTextBoxColumn InStocks;
         private DataGridViewTextBoxColumn Price;
-        private DataGridViewTextBoxColumn StockStatus;
-        private DataGridViewTextBoxColumn MfgDate;
-        private DataGridViewTextBoxColumn ExpDate;
+        private DataGridViewTextBoxColumn Stock_Status;
+        private DataGridViewTextBoxColumn Mfg_Date;
+        private DataGridViewTextBoxColumn Exp_Date;
         private DataGridViewTextBoxColumn Actions;
-        private Guna.UI2.WinForms.Guna2Button btnAddProduct;
     }
 }

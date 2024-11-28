@@ -47,7 +47,19 @@ namespace Administrator
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeliveryLogs_Click(object sender, EventArgs e)
+        {
+            UC_DeliveryLogs ucDL = new UC_DeliveryLogs();
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(ucDL);
         }
     }
 }

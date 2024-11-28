@@ -82,30 +82,34 @@
             guna2Panel1.CustomizableEdges = customizableEdges15;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel1.Size = new Size(301, 953);
+            guna2Panel1.Size = new Size(263, 715);
             guna2Panel1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(60, 133);
+            label1.Location = new Point(84, 119);
             label1.Name = "label1";
-            label1.Size = new Size(155, 31);
+            label1.Size = new Size(69, 25);
             label1.TabIndex = 8;
-            label1.Text = "Administrator";
+            label1.Text = "Admin";
+            label1.Click += label1_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.AccessibleRole = AccessibleRole.None;
             pictureBox1.BackColor = Color.Black;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(80, 12);
+            pictureBox1.Location = new Point(61, 11);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(121, 118);
+            pictureBox1.Size = new Size(118, 106);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
@@ -123,11 +127,12 @@
             btnLogout.ForeColor = Color.White;
             btnLogout.Image = Properties.Resources.lgout;
             btnLogout.ImageAlign = HorizontalAlignment.Left;
-            btnLogout.ImageSize = new Size(50, 50);
-            btnLogout.Location = new Point(3, 885);
+            btnLogout.ImageSize = new Size(35, 35);
+            btnLogout.Location = new Point(3, 664);
+            btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnLogout.Size = new Size(298, 56);
+            btnLogout.Size = new Size(261, 42);
             btnLogout.TabIndex = 6;
             btnLogout.Text = "Logout";
             // 
@@ -145,13 +150,15 @@
             btnDeliveryLogs.ForeColor = Color.White;
             btnDeliveryLogs.Image = Properties.Resources.delivery_logs;
             btnDeliveryLogs.ImageAlign = HorizontalAlignment.Left;
-            btnDeliveryLogs.ImageSize = new Size(50, 50);
-            btnDeliveryLogs.Location = new Point(3, 722);
+            btnDeliveryLogs.ImageSize = new Size(35, 35);
+            btnDeliveryLogs.Location = new Point(3, 542);
+            btnDeliveryLogs.Margin = new Padding(3, 2, 3, 2);
             btnDeliveryLogs.Name = "btnDeliveryLogs";
             btnDeliveryLogs.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnDeliveryLogs.Size = new Size(298, 56);
+            btnDeliveryLogs.Size = new Size(261, 42);
             btnDeliveryLogs.TabIndex = 5;
             btnDeliveryLogs.Text = "Delivery Logs";
+            btnDeliveryLogs.Click += btnDeliveryLogs_Click;
             // 
             // btnInventory
             // 
@@ -167,11 +174,12 @@
             btnInventory.ForeColor = Color.White;
             btnInventory.Image = Properties.Resources.inventory;
             btnInventory.ImageAlign = HorizontalAlignment.Left;
-            btnInventory.ImageSize = new Size(50, 50);
-            btnInventory.Location = new Point(3, 629);
+            btnInventory.ImageSize = new Size(35, 35);
+            btnInventory.Location = new Point(3, 472);
+            btnInventory.Margin = new Padding(3, 2, 3, 2);
             btnInventory.Name = "btnInventory";
             btnInventory.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnInventory.Size = new Size(298, 56);
+            btnInventory.Size = new Size(261, 42);
             btnInventory.TabIndex = 4;
             btnInventory.Text = "Inventory";
             btnInventory.Click += btnInventory_Click;
@@ -190,11 +198,12 @@
             btnOrderHistory.ForeColor = Color.White;
             btnOrderHistory.Image = Properties.Resources.order_History;
             btnOrderHistory.ImageAlign = HorizontalAlignment.Left;
-            btnOrderHistory.ImageSize = new Size(50, 50);
-            btnOrderHistory.Location = new Point(3, 524);
+            btnOrderHistory.ImageSize = new Size(35, 35);
+            btnOrderHistory.Location = new Point(3, 393);
+            btnOrderHistory.Margin = new Padding(3, 2, 3, 2);
             btnOrderHistory.Name = "btnOrderHistory";
             btnOrderHistory.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnOrderHistory.Size = new Size(298, 56);
+            btnOrderHistory.Size = new Size(261, 42);
             btnOrderHistory.TabIndex = 3;
             btnOrderHistory.Text = "Order History";
             btnOrderHistory.Click += btnOrderHistory_Click;
@@ -213,11 +222,12 @@
             btnActivityLogs.ForeColor = Color.White;
             btnActivityLogs.Image = Properties.Resources.activity_logs;
             btnActivityLogs.ImageAlign = HorizontalAlignment.Left;
-            btnActivityLogs.ImageSize = new Size(50, 50);
-            btnActivityLogs.Location = new Point(3, 423);
+            btnActivityLogs.ImageSize = new Size(35, 35);
+            btnActivityLogs.Location = new Point(3, 317);
+            btnActivityLogs.Margin = new Padding(3, 2, 3, 2);
             btnActivityLogs.Name = "btnActivityLogs";
             btnActivityLogs.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnActivityLogs.Size = new Size(298, 56);
+            btnActivityLogs.Size = new Size(261, 42);
             btnActivityLogs.TabIndex = 2;
             btnActivityLogs.Text = "Activity Logs";
             btnActivityLogs.Click += btnActivityLogs_Click;
@@ -236,11 +246,12 @@
             btnAccount.ForeColor = Color.White;
             btnAccount.Image = (Image)resources.GetObject("btnAccount.Image");
             btnAccount.ImageAlign = HorizontalAlignment.Left;
-            btnAccount.ImageSize = new Size(40, 40);
-            btnAccount.Location = new Point(3, 323);
+            btnAccount.ImageSize = new Size(35, 35);
+            btnAccount.Location = new Point(3, 242);
+            btnAccount.Margin = new Padding(3, 2, 3, 2);
             btnAccount.Name = "btnAccount";
             btnAccount.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnAccount.Size = new Size(298, 56);
+            btnAccount.Size = new Size(261, 42);
             btnAccount.TabIndex = 1;
             btnAccount.Text = "Account";
             btnAccount.Click += guna2Button1_Click;
@@ -257,13 +268,14 @@
             btnHome.FillColor = Color.Black;
             btnHome.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnHome.ForeColor = Color.White;
-            btnHome.Image = Properties.Resources.images_removebg_preview_1;
+            btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.ImageAlign = HorizontalAlignment.Left;
-            btnHome.ImageSize = new Size(50, 50);
-            btnHome.Location = new Point(3, 237);
+            btnHome.ImageSize = new Size(40, 40);
+            btnHome.Location = new Point(3, 178);
+            btnHome.Margin = new Padding(3, 2, 3, 2);
             btnHome.Name = "btnHome";
             btnHome.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnHome.Size = new Size(298, 56);
+            btnHome.Size = new Size(261, 42);
             btnHome.TabIndex = 0;
             btnHome.Text = "Home";
             btnHome.Click += btnHome_Click;
@@ -276,38 +288,44 @@
             MainPanel.CustomizableEdges = customizableEdges17;
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.ForeColor = Color.Transparent;
-            MainPanel.Location = new Point(301, 0);
+            MainPanel.Location = new Point(263, 0);
+            MainPanel.Margin = new Padding(3, 2, 3, 2);
             MainPanel.Name = "MainPanel";
             MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            MainPanel.Size = new Size(1581, 953);
+            MainPanel.Size = new Size(1384, 715);
             MainPanel.TabIndex = 1;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(105, 28);
+            pictureBox3.Location = new Point(91, 11);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(556, 41);
+            pictureBox3.Size = new Size(551, 44);
             pictureBox3.TabIndex = 6;
             pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Location = new Point(0, 2);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(99, 98);
+            pictureBox2.Size = new Size(85, 66);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
             // Home_Dashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1882, 953);
+            ClientSize = new Size(1647, 715);
             Controls.Add(MainPanel);
             Controls.Add(guna2Panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Home_Dashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Home_Dashboard";
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();

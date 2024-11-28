@@ -16,5 +16,10 @@ namespace Administrator
         {
             InitializeComponent();
         }
+
+        private void UC_Product_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

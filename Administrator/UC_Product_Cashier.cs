@@ -24,7 +24,7 @@ namespace Administrator
 
         private void UC_Product_Cashier_Load(object sender, EventArgs e)
         {
-            SqlDataReader reader = null;
+       
         }
     }
 }

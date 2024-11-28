@@ -42,12 +42,14 @@
             // 
             // guna2PictureBox1
             // 
+            guna2PictureBox1.BorderRadius = 5;
             guna2PictureBox1.CustomizableEdges = customizableEdges1;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(17, 13);
+            guna2PictureBox1.Location = new Point(15, 10);
+            guna2PictureBox1.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new Size(243, 180);
+            guna2PictureBox1.Size = new Size(213, 148);
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
             // 
@@ -62,10 +64,11 @@
             btn50g.FillColor = Color.LightGray;
             btn50g.Font = new Font("Segoe UI", 9F);
             btn50g.ForeColor = Color.Black;
-            btn50g.Location = new Point(17, 298);
+            btn50g.Location = new Point(15, 224);
+            btn50g.Margin = new Padding(3, 2, 3, 2);
             btn50g.Name = "btn50g";
             btn50g.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btn50g.Size = new Size(118, 38);
+            btn50g.Size = new Size(103, 28);
             btn50g.TabIndex = 1;
             btn50g.Text = "50g";
             // 
@@ -80,22 +83,25 @@
             btn100g.FillColor = Color.LightGray;
             btn100g.Font = new Font("Segoe UI", 9F);
             btn100g.ForeColor = Color.Black;
-            btn100g.Location = new Point(151, 298);
+            btn100g.Location = new Point(132, 224);
+            btn100g.Margin = new Padding(3, 2, 3, 2);
             btn100g.Name = "btn100g";
             btn100g.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btn100g.Size = new Size(118, 38);
+            btn100g.Size = new Size(103, 28);
             btn100g.TabIndex = 2;
             btn100g.Text = "100g";
             // 
             // UC_Product
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btn100g);
             Controls.Add(btn50g);
             Controls.Add(guna2PictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Product";
-            Size = new Size(281, 374);
+            Size = new Size(246, 290);
+            Load += UC_Product_Load;
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
         }

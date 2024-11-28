@@ -101,7 +101,6 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2Panel1.Size = new Size(301, 953);
             guna2Panel1.TabIndex = 1;
-            guna2Panel1.Paint += this.guna2Panel1_Paint;
             // 
             // label1
             // 
@@ -437,7 +436,6 @@
             Controls.Add(guna2Panel1);
             Name = "Home_Dashboard_Cashier";
             Text = "Home_Dashboard_Cashier";
-            Load += this.Home_Dashboard_Cashier_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
