@@ -28,64 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ActivityLogs));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            label1 = new Label();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtALSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             dtgActivityLogs = new DataGridView();
             ActivityLogs_ID = new DataGridViewTextBoxColumn();
             Name = new DataGridViewTextBoxColumn();
             Description = new DataGridViewTextBoxColumn();
             Date_Time = new DataGridViewTextBoxColumn();
             Action = new DataGridViewTextBoxColumn();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            Archived = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dtgActivityLogs).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // txtALSearchBar
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(23, 149);
-            label1.Name = "label1";
-            label1.Size = new Size(192, 41);
-            label1.TabIndex = 1;
-            label1.Text = "Activity Logs";
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.BorderRadius = 10;
-            guna2TextBox1.CustomizableEdges = customizableEdges3;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.IconLeftSize = new Size(25, 25);
-            guna2TextBox1.IconRight = (Image)resources.GetObject("guna2TextBox1.IconRight");
-            guna2TextBox1.IconRightSize = new Size(25, 25);
-            guna2TextBox1.Location = new Point(1247, 149);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox1.Size = new Size(283, 36);
-            guna2TextBox1.TabIndex = 2;
+            txtALSearchBar.BorderRadius = 10;
+            txtALSearchBar.CustomizableEdges = customizableEdges1;
+            txtALSearchBar.DefaultText = "";
+            txtALSearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtALSearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtALSearchBar.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtALSearchBar.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtALSearchBar.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtALSearchBar.Font = new Font("Segoe UI", 9F);
+            txtALSearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtALSearchBar.IconLeftSize = new Size(25, 25);
+            txtALSearchBar.IconRight = (Image)resources.GetObject("txtALSearchBar.IconRight");
+            txtALSearchBar.Location = new Point(893, 63);
+            txtALSearchBar.Name = "txtALSearchBar";
+            txtALSearchBar.PasswordChar = '\0';
+            txtALSearchBar.PlaceholderText = "";
+            txtALSearchBar.SelectedText = "";
+            txtALSearchBar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtALSearchBar.Size = new Size(248, 27);
+            txtALSearchBar.TabIndex = 2;
             // 
             // dtgActivityLogs
             // 
             dtgActivityLogs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgActivityLogs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgActivityLogs.Columns.AddRange(new DataGridViewColumn[] { ActivityLogs_ID, Name, Description, Date_Time, Action });
-            dtgActivityLogs.Location = new Point(23, 193);
+            dtgActivityLogs.Location = new Point(20, 95);
+            dtgActivityLogs.Margin = new Padding(3, 2, 3, 2);
             dtgActivityLogs.Name = "dtgActivityLogs";
             dtgActivityLogs.RowHeadersWidth = 51;
-            dtgActivityLogs.Size = new Size(1507, 720);
+            dtgActivityLogs.Size = new Size(1121, 540);
             dtgActivityLogs.TabIndex = 3;
             // 
             // ActivityLogs_ID
@@ -118,27 +110,60 @@
             Action.MinimumWidth = 6;
             Action.Name = "Action";
             // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(20, 59);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(176, 31);
+            guna2HtmlLabel1.TabIndex = 4;
+            guna2HtmlLabel1.Text = "Activity Logs";
+            // 
+            // Archived
+            // 
+            Archived.BorderRadius = 10;
+            Archived.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            Archived.CustomizableEdges = customizableEdges3;
+            Archived.DisabledState.BorderColor = Color.DarkGray;
+            Archived.DisabledState.CustomBorderColor = Color.DarkGray;
+            Archived.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Archived.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Archived.FillColor = Color.LightGray;
+            Archived.Font = new Font("Segoe UI", 9F);
+            Archived.ForeColor = Color.Black;
+            Archived.Location = new Point(1025, 640);
+            Archived.Name = "Archived";
+            Archived.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            Archived.Size = new Size(116, 32);
+            Archived.TabIndex = 5;
+            Archived.Text = "Archived";
+            // 
             // UC_ActivityLogs
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(Archived);
+            Controls.Add(guna2HtmlLabel1);
             Controls.Add(dtgActivityLogs);
-            Controls.Add(guna2TextBox1);
-            Controls.Add(label1);
-            Size = new Size(1581, 953);
+            Controls.Add(txtALSearchBar);
+            Margin = new Padding(3, 2, 3, 2);
+
+            Size = new Size(1162, 686);
             ((System.ComponentModel.ISupportInitialize)dtgActivityLogs).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtALSearchBar;
         private DataGridView dtgActivityLogs;
         private DataGridViewTextBoxColumn ActivityLogs_ID;
         private DataGridViewTextBoxColumn Name;
         private DataGridViewTextBoxColumn Description;
         private DataGridViewTextBoxColumn Date_Time;
         private DataGridViewTextBoxColumn Action;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button Archived;
     }
 }

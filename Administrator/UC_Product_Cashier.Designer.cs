@@ -28,40 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ProductPanel = new FlowLayoutPanel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            PanelProduct = new FlowLayoutPanel();
+            PanelListOfProduct = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // ProductPanel
+            // PanelProduct
             // 
-            ProductPanel.Location = new Point(3, 3);
-            ProductPanel.Name = "ProductPanel";
-            ProductPanel.Size = new Size(1017, 950);
-            ProductPanel.TabIndex = 0;
-            ProductPanel.Paint += ProductPanel_Paint;
+            PanelProduct.Location = new Point(3, 2);
+            PanelProduct.Margin = new Padding(3, 2, 3, 2);
+            PanelProduct.Name = "PanelProduct";
+            PanelProduct.Size = new Size(782, 684);
+            PanelProduct.TabIndex = 0;
+            PanelProduct.Paint += ProductPanel_Paint;
             // 
-            // flowLayoutPanel1
+            // PanelListOfProduct
             // 
-            flowLayoutPanel1.Location = new Point(1026, 3);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(552, 947);
-            flowLayoutPanel1.TabIndex = 1;
+            PanelListOfProduct.Location = new Point(791, 2);
+            PanelListOfProduct.Margin = new Padding(3, 2, 3, 2);
+            PanelListOfProduct.Name = "PanelListOfProduct";
+            PanelListOfProduct.Size = new Size(368, 684);
+            PanelListOfProduct.TabIndex = 1;
             // 
             // UC_Product_Cashier
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(flowLayoutPanel1);
-            Controls.Add(ProductPanel);
+            Controls.Add(PanelListOfProduct);
+            Controls.Add(PanelProduct);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Product_Cashier";
-            Size = new Size(1581, 953);
+            Size = new Size(1162, 688);
             Load += UC_Product_Cashier_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private FlowLayoutPanel ProductPanel;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel PanelProduct;
+        private FlowLayoutPanel PanelListOfProduct;
     }
 }

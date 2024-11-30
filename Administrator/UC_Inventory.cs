@@ -26,7 +26,7 @@ namespace Administrator
         private void btnStock_Click(object sender, EventArgs e)
         {
             sqlcon.Open();
-            sqlcom = new SqlCommand("SELECT Product_ID, Product_Name, Grams, Instock, Price, Stock_Status,Mfg_Date, Exp_Date, Action*, FROM  ", sqlcon);
+            sqlcom = new SqlCommand("SELECT StockID,ProductID,ProductName,Grams,Instock,Price,StockStatus,MfgDate,ExpDate*, FROM  ", sqlcon);
             SqlDataAdapter sqa = new SqlDataAdapter(sqlcom);
             Inventory.Clear();
             sqa.Fill(Inventory);
@@ -37,7 +37,7 @@ namespace Administrator
         private void btnProductList_Click(object sender, EventArgs e)
         {
             sqlcon.Open();
-            sqlcom = new SqlCommand("SELECT Product_ID, Product_Name, Grams, Instock, Price, Qty.Stock,Mfg_Date, Exp_Date, Status*, FROM  ", sqlcon);
+            sqlcom = new SqlCommand("SELECT ProductID, ProductName,Grams,Price,QtyStock,MfgDate, ExpDate, Status*, FROM  ", sqlcon);
             SqlDataAdapter sqa = new SqlDataAdapter(sqlcom);
             Inventory.Clear();
             sqa.Fill(Inventory);

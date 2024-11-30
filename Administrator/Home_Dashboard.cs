@@ -47,7 +47,9 @@ namespace Administrator
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-
+            UC_Inventory ucI = new UC_Inventory();
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(ucI);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -60,6 +62,30 @@ namespace Administrator
             UC_DeliveryLogs ucDL = new UC_DeliveryLogs();
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(ucDL);
+        }
+
+        private void Home_Dashboard_Load(object sender, EventArgs e)
+        {
+            UC_Home ucH = new UC_Home();
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(ucH);
+        }
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Admin_Login admin_Login = new Admin_Login();
+            admin_Login.Show();
+            this.Hide();
         }
     }
 }
