@@ -13,7 +13,7 @@ namespace Administrator
             ApplicationConfiguration.Initialize();
 
             Application.Run(new Admin_Login());
-            
+
         }
     }
 }
