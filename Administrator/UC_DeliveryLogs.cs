@@ -21,5 +21,15 @@ namespace Administrator
         {
 
         }
+
+        private void txtDLSearchBar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgDeliveryLogs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

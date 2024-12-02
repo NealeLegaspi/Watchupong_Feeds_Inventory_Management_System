@@ -16,5 +16,10 @@ namespace Administrator
         {
             InitializeComponent();
         }
+
+        private void dtgOrderHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

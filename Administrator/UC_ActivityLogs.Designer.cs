@@ -59,7 +59,7 @@
             txtALSearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtALSearchBar.IconLeftSize = new Size(25, 25);
             txtALSearchBar.IconRight = (Image)resources.GetObject("txtALSearchBar.IconRight");
-            txtALSearchBar.Location = new Point(893, 63);
+            txtALSearchBar.Location = new Point(906, 30);
             txtALSearchBar.Name = "txtALSearchBar";
             txtALSearchBar.PasswordChar = '\0';
             txtALSearchBar.PlaceholderText = "";
@@ -73,12 +73,13 @@
             dtgActivityLogs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgActivityLogs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgActivityLogs.Columns.AddRange(new DataGridViewColumn[] { ActivityLogs_ID, Name, Description, Date_Time, Action });
-            dtgActivityLogs.Location = new Point(20, 95);
+            dtgActivityLogs.Location = new Point(20, 62);
             dtgActivityLogs.Margin = new Padding(3, 2, 3, 2);
             dtgActivityLogs.Name = "dtgActivityLogs";
             dtgActivityLogs.RowHeadersWidth = 51;
-            dtgActivityLogs.Size = new Size(1121, 540);
+            dtgActivityLogs.Size = new Size(1134, 485);
             dtgActivityLogs.TabIndex = 3;
+            dtgActivityLogs.CellContentClick += dtgActivityLogs_CellContentClick;
             // 
             // ActivityLogs_ID
             // 
@@ -114,11 +115,12 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(20, 59);
+            guna2HtmlLabel1.Location = new Point(20, 26);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(176, 31);
             guna2HtmlLabel1.TabIndex = 4;
             guna2HtmlLabel1.Text = "Activity Logs";
+            guna2HtmlLabel1.Click += guna2HtmlLabel1_Click;
             // 
             // Archived
             // 
@@ -132,7 +134,7 @@
             Archived.FillColor = Color.LightGray;
             Archived.Font = new Font("Segoe UI", 9F);
             Archived.ForeColor = Color.Black;
-            Archived.Location = new Point(1025, 640);
+            Archived.Location = new Point(1038, 552);
             Archived.Name = "Archived";
             Archived.ShadowDecoration.CustomizableEdges = customizableEdges4;
             Archived.Size = new Size(116, 32);
@@ -148,8 +150,7 @@
             Controls.Add(dtgActivityLogs);
             Controls.Add(txtALSearchBar);
             Margin = new Padding(3, 2, 3, 2);
-
-            Size = new Size(1162, 686);
+            Size = new Size(1160, 598);
             ((System.ComponentModel.ISupportInitialize)dtgActivityLogs).EndInit();
             ResumeLayout(false);
             PerformLayout();

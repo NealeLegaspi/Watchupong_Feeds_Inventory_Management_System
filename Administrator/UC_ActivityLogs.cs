@@ -17,6 +17,15 @@ namespace Administrator
             InitializeComponent();
         }
 
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgActivityLogs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
-  }
+}
 

@@ -51,12 +51,13 @@
             dtgOrderHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgOrderHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgOrderHistory.Columns.AddRange(new DataGridViewColumn[] { Customer_ID, Product_ID, Payment, Date_Time, Order_Status, Total });
-            dtgOrderHistory.Location = new Point(22, 91);
+            dtgOrderHistory.Location = new Point(12, 57);
             dtgOrderHistory.Margin = new Padding(3, 2, 3, 2);
             dtgOrderHistory.Name = "dtgOrderHistory";
             dtgOrderHistory.RowHeadersWidth = 51;
-            dtgOrderHistory.Size = new Size(1121, 540);
+            dtgOrderHistory.Size = new Size(1134, 485);
             dtgOrderHistory.TabIndex = 0;
+            dtgOrderHistory.CellContentClick += dtgOrderHistory_CellContentClick;
             // 
             // Customer_ID
             // 
@@ -98,7 +99,7 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Verdana", 18.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(22, 53);
+            guna2HtmlLabel1.Location = new Point(12, 20);
             guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(192, 33);
@@ -117,7 +118,7 @@
             Archived.FillColor = Color.LightGray;
             Archived.Font = new Font("Segoe UI", 9F);
             Archived.ForeColor = Color.Black;
-            Archived.Location = new Point(1027, 636);
+            Archived.Location = new Point(1030, 547);
             Archived.Name = "Archived";
             Archived.ShadowDecoration.CustomizableEdges = customizableEdges2;
             Archived.Size = new Size(116, 32);
@@ -138,7 +139,7 @@
             txtOHSearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtOHSearchBar.IconLeftSize = new Size(25, 25);
             txtOHSearchBar.IconRight = (Image)resources.GetObject("txtOHSearchBar.IconRight");
-            txtOHSearchBar.Location = new Point(895, 59);
+            txtOHSearchBar.Location = new Point(898, 26);
             txtOHSearchBar.Name = "txtOHSearchBar";
             txtOHSearchBar.PasswordChar = '\0';
             txtOHSearchBar.PlaceholderText = "";
@@ -159,7 +160,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_OrderHistory";
             RightToLeft = RightToLeft.No;
-            Size = new Size(1162, 686);
+            Size = new Size(1160, 598);
             ((System.ComponentModel.ISupportInitialize)dtgOrderHistory).EndInit();
             ResumeLayout(false);
             PerformLayout();

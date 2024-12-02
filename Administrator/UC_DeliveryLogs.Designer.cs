@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_DeliveryLogs));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dtgDeliveryLogs = new DataGridView();
             Product_ID = new DataGridViewTextBoxColumn();
             ProductName = new DataGridViewTextBoxColumn();
@@ -52,12 +52,13 @@
             dtgDeliveryLogs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgDeliveryLogs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgDeliveryLogs.Columns.AddRange(new DataGridViewColumn[] { Product_ID, ProductName, Grams, Price, Mfg_Date, Exp_Date, Delivery_Date });
-            dtgDeliveryLogs.Location = new Point(19, 97);
+            dtgDeliveryLogs.Location = new Point(19, 57);
             dtgDeliveryLogs.Margin = new Padding(3, 2, 3, 2);
             dtgDeliveryLogs.Name = "dtgDeliveryLogs";
             dtgDeliveryLogs.RowHeadersWidth = 51;
-            dtgDeliveryLogs.Size = new Size(1121, 540);
+            dtgDeliveryLogs.Size = new Size(1134, 485);
             dtgDeliveryLogs.TabIndex = 0;
+            dtgDeliveryLogs.CellContentClick += dtgDeliveryLogs_CellContentClick;
             // 
             // Product_ID
             // 
@@ -105,7 +106,7 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Verdana", 18.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(19, 60);
+            guna2HtmlLabel1.Location = new Point(19, 20);
             guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(194, 33);
@@ -116,7 +117,7 @@
             // txtDLSearchBar
             // 
             txtDLSearchBar.BorderRadius = 10;
-            txtDLSearchBar.CustomizableEdges = customizableEdges3;
+            txtDLSearchBar.CustomizableEdges = customizableEdges9;
             txtDLSearchBar.DefaultText = "";
             txtDLSearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtDLSearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -127,20 +128,21 @@
             txtDLSearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtDLSearchBar.IconLeftSize = new Size(25, 25);
             txtDLSearchBar.IconRight = (Image)resources.GetObject("txtDLSearchBar.IconRight");
-            txtDLSearchBar.Location = new Point(892, 66);
+            txtDLSearchBar.Location = new Point(905, 26);
             txtDLSearchBar.Name = "txtDLSearchBar";
             txtDLSearchBar.PasswordChar = '\0';
             txtDLSearchBar.PlaceholderText = "";
             txtDLSearchBar.SelectedText = "";
-            txtDLSearchBar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtDLSearchBar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtDLSearchBar.Size = new Size(248, 27);
             txtDLSearchBar.TabIndex = 8;
+            txtDLSearchBar.TextChanged += txtDLSearchBar_TextChanged;
             // 
             // Archived
             // 
             Archived.BorderRadius = 10;
             Archived.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            Archived.CustomizableEdges = customizableEdges5;
+            Archived.CustomizableEdges = customizableEdges11;
             Archived.DisabledState.BorderColor = Color.DarkGray;
             Archived.DisabledState.CustomBorderColor = Color.DarkGray;
             Archived.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -148,9 +150,9 @@
             Archived.FillColor = Color.LightGray;
             Archived.Font = new Font("Segoe UI", 9F);
             Archived.ForeColor = Color.Black;
-            Archived.Location = new Point(1024, 642);
+            Archived.Location = new Point(1037, 547);
             Archived.Name = "Archived";
-            Archived.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            Archived.ShadowDecoration.CustomizableEdges = customizableEdges12;
             Archived.Size = new Size(116, 32);
             Archived.TabIndex = 9;
             Archived.Text = "Archived";
@@ -165,7 +167,7 @@
             Controls.Add(dtgDeliveryLogs);
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_DeliveryLogs";
-            Size = new Size(1162, 686);
+            Size = new Size(1160, 598);
             ((System.ComponentModel.ISupportInitialize)dtgDeliveryLogs).EndInit();
             ResumeLayout(false);
             PerformLayout();
