@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             textBox1 = new TextBox();
             txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
             btnAdd = new Guna.UI2.WinForms.Guna2CircleButton();
             btnDeduct = new Guna.UI2.WinForms.Guna2CircleButton();
             label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // textBox1
@@ -50,7 +52,7 @@
             // txtProductName
             // 
             txtProductName.BorderRadius = 20;
-            txtProductName.CustomizableEdges = customizableEdges5;
+            txtProductName.CustomizableEdges = customizableEdges1;
             txtProductName.DefaultText = "";
             txtProductName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtProductName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -59,12 +61,12 @@
             txtProductName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtProductName.Font = new Font("Segoe UI", 9F);
             txtProductName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtProductName.Location = new Point(3, 0);
+            txtProductName.Location = new Point(3, 9);
             txtProductName.Name = "txtProductName";
             txtProductName.PasswordChar = '\0';
             txtProductName.PlaceholderText = "";
             txtProductName.SelectedText = "";
-            txtProductName.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtProductName.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtProductName.Size = new Size(200, 36);
             txtProductName.TabIndex = 1;
             // 
@@ -80,9 +82,9 @@
             btnAdd.Font = new Font("Segoe UI", 9F);
             btnAdd.ForeColor = Color.White;
             btnAdd.ImageSize = new Size(35, 35);
-            btnAdd.Location = new Point(313, 12);
+            btnAdd.Location = new Point(275, 15);
             btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btnAdd.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnAdd.Size = new Size(26, 24);
             btnAdd.TabIndex = 2;
@@ -100,9 +102,9 @@
             btnDeduct.Font = new Font("Segoe UI", 9F);
             btnDeduct.ForeColor = Color.White;
             btnDeduct.ImageSize = new Size(35, 35);
-            btnDeduct.Location = new Point(224, 12);
+            btnDeduct.Location = new Point(224, 15);
             btnDeduct.Name = "btnDeduct";
-            btnDeduct.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnDeduct.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnDeduct.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnDeduct.Size = new Size(26, 24);
             btnDeduct.TabIndex = 3;
@@ -113,22 +115,42 @@
             label1.AutoSize = true;
             label1.Location = new Point(256, 21);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(13, 15);
             label1.TabIndex = 4;
-            label1.Text = "label1";
+            label1.Text = "2";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(319, 21);
+            label2.Name = "label2";
+            label2.Size = new Size(32, 15);
+            label2.TabIndex = 5;
+            label2.Text = "100g";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(366, 21);
+            label3.Name = "label3";
+            label3.Size = new Size(40, 15);
+            label3.TabIndex = 6;
+            label3.Text = "200.00";
             // 
             // UC_ProductAddDeduc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnDeduct);
             Controls.Add(btnAdd);
             Controls.Add(txtProductName);
             Controls.Add(textBox1);
             Name = "UC_ProductAddDeduc";
-            Size = new Size(368, 54);
+            Size = new Size(423, 54);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,5 +162,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnAdd;
         private Guna.UI2.WinForms.Guna2CircleButton btnDeduct;
         private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

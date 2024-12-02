@@ -88,7 +88,7 @@
             guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel1.Size = new Size(208, 749);
+            guna2Panel1.Size = new Size(208, 661);
             guna2Panel1.TabIndex = 0;
             // 
             // label1
@@ -335,7 +335,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 749);
+            ClientSize = new Size(1370, 661);
             Controls.Add(guna2Panel2);
             Controls.Add(MainPanel);
             Controls.Add(guna2Panel1);

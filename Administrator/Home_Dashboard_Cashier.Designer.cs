@@ -121,7 +121,7 @@
             guna2Button1.Image = Properties.Resources.lgout;
             guna2Button1.ImageAlign = HorizontalAlignment.Left;
             guna2Button1.ImageSize = new Size(50, 50);
-            guna2Button1.Location = new Point(4, 635);
+            guna2Button1.Location = new Point(4, 547);
             guna2Button1.Margin = new Padding(3, 2, 3, 2);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -266,7 +266,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 749);
+            ClientSize = new Size(1370, 661);
             Controls.Add(PanelCashier);
             Controls.Add(guna2Panel1);
             Controls.Add(guna2Panel2);
