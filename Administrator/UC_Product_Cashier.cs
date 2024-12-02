@@ -37,7 +37,6 @@ namespace Administrator
                 ucP.GetPrice100g = Convert.ToDecimal(reader["Price100g"]);
                 UC_Product.P50g += selectedClick;
                 UC_Product.P100g += selectedClick;
-                PanelProduct.Controls.Add(ucP);
             }
         }
 
