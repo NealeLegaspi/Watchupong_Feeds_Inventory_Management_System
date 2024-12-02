@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema 
+    Microsoft ResX Schema
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -121,23 +121,24 @@
   <data name="btnAddUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAGtJREFUSEtjYCAC/P//X+E/bhCPrp4iMGoZVcCoZVQBQ9Oy////yxOB7dFtQAL5
-        WNRjYJhl9AIOo5ZRAwxzy+qJwP3oOpHAeizqsWFI8icEqJapiQGjllEFjFpGFTCsLRPAUiLAsD66elwA
-        AKdadrlcwNgAAAAAAElFTkSuQmCC
+        DAAACwwBP0AiyAAAAHlJREFUSEtjIAb8//9fAYhxgXioMuoAoIGjllEOgAaOWkY5ABo4BC0DKpYnAtsD
+        MS6QD8TY9KBgmGX0Ag6jllEDDHPL6onA/UCMC6wHYmx60DEk+RMCQIWjxRXlAGjgqGWUA6CBo5ZRDoAG
+        CgAxtlIBhPWhyggABgYAp1p2uVQd39kAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="guna2TextBox1.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC0AAAAcCAYAAAD1PDaSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAeZJREFUWEfl1s2rTVEYBvB3P8+z9j57n8QZkI8j5+aYUHdCSsktJgaXzGQkZgoT
-        V1JyDbgpJN1iQq4YmBiaKEzc5DsfE/+Nlpi8hbNv1nZ2fsPnWavePdhrLbP/WE/STpIHzGxPWZZ9v2Bs
-        SNqbZdkzUoskb0q6KOkGyack35jZUTMLft+/si7LsieSrlVVtdaXUVVVawCdIfmqKIpNvm/aIA4iaZcv
-        fmEA4G0IYasvmlJlGd5bnm/2xe+UZbme5Gsz2+C75ACcBzDj8xFNkXzsw6T6/X5J8oWZZb4bVfwPQgjb
-        fJ4MWUxLuurzOkhOA7jg82QAXZE05fM6ut3uapLPfZ4MgHt5nk/6vKYMwCcfJgNg4W+ctwA++iwZkvOS
-        dvu8nt5ykos+TSbP80MAzvq8jvjRkq77PKUVkuKRt2QAHkja4fOkJF0m84M+H9EEyZc+bEIPwIf4nvDF
-        HywD8LXT6Uz4oilb4oOpxjtiZbxJST7yRdM2AngH4NRgMOj48geS3A/gM8l9AObMbNYvaloRQjgZjzCS
-        DyXNkDwcQjhO8haALwAumdmqnxvGZfDvQgjbSR6RdBrAsfjWHg6HhV8XAZgHcM7nYw/AnbYOfrutgy+0
-        cXACuNvWwe+b2QlfjDst4ZZtl2+s1jrEnWMCwAAAAABJRU5ErkJggg==
+        DAAACwwBP0AiyAAAAf1JREFUWEfll7FLG1Ecx3P3LneXhKIZFNumeMG4WHCpCIIkUJcOqbhJp1I3wbqo
+        lEKpHVQKKiIBXRQj7eDSsYtguyRItFVaXfrf9HO53xIXk8O75PADP37v+7uX977v5d3lErvPpA3DGFdK
+        TdGeSCQSGa/cgWD0haZpP5QyqhjeQa8Q27RPiHO6zBDxeucO4DFmjzG4mUwmH0mtAeoPdd14h/maZVmD
+        Um4bjmsEw3nRt+Houv4rHo8/Ex06SU3TL2KmOSS6KTjjT1joGc1+rxIi7NhHYlFkqxQw/l3a4ZDJZBJM
+        WqGpeZXWce8DjsmIyOBRyipyjjdE+oJFF/mmPokMHp4E65guiPRFKpXqw/hPkcHDDh2apjks0i8a4/yV
+        dvAwWfkunreM80eawcPXWuJ4PBfpk3QX41RFBA9H4xW79F6kL9xFE1siQ6GbCd1Hnm9Y9FfGGBMZDkz4
+        WSlzWmSrZDkap9IOlTS7dUl2PNk0D/jcP9u2s6JD5yk7ViM3+x7RQ/8K8U102xhg534TC47j2FK7CT7V
+        JH2uyC/Ja9SWvUvtw+I9Yh5D7h+AI877Ivk1tTnyLiaviVX69Xrd6zdiRxivg9FRjL7B+BLGZsn5XC5n
+        yeUGuF4iPoiMDpjej6rxvagaL0fRuML0QVSNfyG/9WR0MIhWf2WjRCz2H6zWOsSwRPaFAAAAAElFTkSu
+        QmCC
 </value>
   </data>
   <metadata name="Name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -88,7 +88,7 @@
             guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel1.Size = new Size(208, 749);
+            guna2Panel1.Size = new Size(208, 661);
             guna2Panel1.TabIndex = 0;
             // 
             // label1
@@ -131,7 +131,7 @@
             btnLogout.Image = Properties.Resources.lgout;
             btnLogout.ImageAlign = HorizontalAlignment.Left;
             btnLogout.ImageSize = new Size(35, 35);
-            btnLogout.Location = new Point(3, 696);
+            btnLogout.Location = new Point(3, 608);
             btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -155,7 +155,7 @@
             btnDeliveryLogs.Image = Properties.Resources.delivery_logs;
             btnDeliveryLogs.ImageAlign = HorizontalAlignment.Left;
             btnDeliveryLogs.ImageSize = new Size(35, 35);
-            btnDeliveryLogs.Location = new Point(3, 576);
+            btnDeliveryLogs.Location = new Point(3, 515);
             btnDeliveryLogs.Margin = new Padding(3, 2, 3, 2);
             btnDeliveryLogs.Name = "btnDeliveryLogs";
             btnDeliveryLogs.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -180,7 +180,7 @@
             btnInventory.Image = Properties.Resources.inventory;
             btnInventory.ImageAlign = HorizontalAlignment.Left;
             btnInventory.ImageSize = new Size(35, 35);
-            btnInventory.Location = new Point(3, 502);
+            btnInventory.Location = new Point(3, 449);
             btnInventory.Margin = new Padding(3, 2, 3, 2);
             btnInventory.Name = "btnInventory";
             btnInventory.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -204,7 +204,7 @@
             btnOrderHistory.Image = Properties.Resources.order_History;
             btnOrderHistory.ImageAlign = HorizontalAlignment.Left;
             btnOrderHistory.ImageSize = new Size(35, 35);
-            btnOrderHistory.Location = new Point(3, 424);
+            btnOrderHistory.Location = new Point(3, 383);
             btnOrderHistory.Margin = new Padding(3, 2, 3, 2);
             btnOrderHistory.Name = "btnOrderHistory";
             btnOrderHistory.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -229,7 +229,7 @@
             btnActivityLogs.Image = Properties.Resources.activity_logs;
             btnActivityLogs.ImageAlign = HorizontalAlignment.Left;
             btnActivityLogs.ImageSize = new Size(35, 35);
-            btnActivityLogs.Location = new Point(3, 340);
+            btnActivityLogs.Location = new Point(3, 314);
             btnActivityLogs.Margin = new Padding(3, 2, 3, 2);
             btnActivityLogs.Name = "btnActivityLogs";
             btnActivityLogs.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -254,7 +254,7 @@
             btnAccount.Image = (Image)resources.GetObject("btnAccount.Image");
             btnAccount.ImageAlign = HorizontalAlignment.Left;
             btnAccount.ImageSize = new Size(35, 35);
-            btnAccount.Location = new Point(3, 256);
+            btnAccount.Location = new Point(3, 245);
             btnAccount.Margin = new Padding(3, 2, 3, 2);
             btnAccount.Name = "btnAccount";
             btnAccount.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -278,7 +278,7 @@
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.ImageAlign = HorizontalAlignment.Left;
             btnHome.ImageSize = new Size(40, 40);
-            btnHome.Location = new Point(3, 186);
+            btnHome.Location = new Point(3, 184);
             btnHome.Margin = new Padding(3, 2, 3, 2);
             btnHome.Name = "btnHome";
             btnHome.ShadowDecoration.CustomizableEdges = customizableEdges14;
@@ -296,7 +296,7 @@
             MainPanel.Margin = new Padding(3, 2, 3, 2);
             MainPanel.Name = "MainPanel";
             MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            MainPanel.Size = new Size(1160, 686);
+            MainPanel.Size = new Size(1160, 598);
             MainPanel.TabIndex = 1;
             MainPanel.Paint += MainPanel_Paint;
             // 
@@ -335,7 +335,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 749);
+            ClientSize = new Size(1370, 661);
             Controls.Add(guna2Panel2);
             Controls.Add(MainPanel);
             Controls.Add(guna2Panel1);

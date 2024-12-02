@@ -25,13 +25,13 @@ namespace Administrator
         private void UC_Product_Cashier_Load(object sender, EventArgs e)
         {
             WatchupongConnections.Instance.Open();
-            var reader = WachupongConnections.Instance.ExecuteReader;
+            var reader = WatchupongConnections.Instance.ExecuteReader
             ("Select ProductName, ProductImage, Price From Inventory_ProductList");
 
             while (reader.Read())
             {
                 UC_Product ucP = new UC_Product();
-                ucP.GetProductName = reader["ProductName"];
+                ucP.GetProductName = Convert.ToString(reader["ProductName"]);
                 ucP.GetProductImage = (byte[])reader["ProductImage"];
                 ucP.GetPrice50g = Convert.ToDecimal(reader["Price50g"]);
                 ucP.GetPrice100g = Convert.ToDecimal(reader["Price100g"]);

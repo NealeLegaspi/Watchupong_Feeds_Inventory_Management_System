@@ -49,7 +49,7 @@
             // 
             pictureBox1.ErrorImage = Properties.Resources.icon;
             pictureBox1.Image = Properties.Resources.icon;
-            pictureBox1.Location = new Point(900, 125);
+            pictureBox1.Location = new Point(897, 60);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(306, 282);
@@ -60,7 +60,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.e720f0e1_d5af_4a1d_ab83_e1db345786b6_removebg_preview;
-            pictureBox2.Location = new Point(69, 125);
+            pictureBox2.Location = new Point(49, 60);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(647, 518);
@@ -80,7 +80,7 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(856, 548);
+            guna2TextBox1.Location = new Point(856, 490);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "";
@@ -88,13 +88,14 @@
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2TextBox1.Size = new Size(420, 30);
             guna2TextBox1.TabIndex = 2;
+            guna2TextBox1.TextChanged += guna2TextBox1_TextChanged;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.White;
-            guna2HtmlLabel1.Location = new Point(856, 433);
+            guna2HtmlLabel1.Location = new Point(856, 390);
             guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(91, 27);
@@ -114,7 +115,7 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Segoe UI", 9F);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(856, 465);
+            guna2TextBox2.Location = new Point(856, 422);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '\0';
             guna2TextBox2.PlaceholderText = "";
@@ -128,7 +129,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = Color.White;
-            guna2HtmlLabel2.Location = new Point(856, 516);
+            guna2HtmlLabel2.Location = new Point(856, 458);
             guna2HtmlLabel2.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(86, 27);
@@ -145,7 +146,7 @@
             btnLogin.FillColor = Color.White;
             btnLogin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.Black;
-            btnLogin.Location = new Point(983, 606);
+            btnLogin.Location = new Point(981, 550);
             btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -159,7 +160,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1370, 749);
+            ClientSize = new Size(1370, 661);
             Controls.Add(btnLogin);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2TextBox2);
