@@ -47,7 +47,7 @@ namespace Administrator
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            UC_Inventory ucI = new UC_Inventory();
+            UC_InventoryStocks ucI = new UC_InventoryStocks();
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(ucI);
         }
