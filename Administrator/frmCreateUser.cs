@@ -10,16 +10,49 @@ using System.Windows.Forms;
 
 namespace Administrator
 {
-    public partial class CreateUser : Form
+    public partial class frmcreateuser : Form
     {
-        public CreateUser()
+        public frmcreateuser()
         {
             InitializeComponent();
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
+        public static EventHandler adduser;
 
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            WatchupongConnections.Instance.Open();
+            var query = WatchupongConnections.Instance.CreateCommand
+                ("INSERT INTO User_Information values (@user,@nm,@email,@pass,@role,@gender,@status)");
+
+            query.Parameters.AddWithValue("@user", txtuser.Text);
+            query.Parameters.AddWithValue("@nm", $"{txtfirst.Text} {txtlast.Text}");
+            query.Parameters.AddWithValue("@email", txtemail.Text);
+            query.Parameters.AddWithValue("@pass", txtpass.Text);
+            query.Parameters.AddWithValue("@role", cbrole.Text);
+            query.Parameters.AddWithValue("@status", "Active");
+            if (rbmale.Checked)
+            {
+                query.Parameters.AddWithValue("@gender", "Male");
+            }
+            else
+            {
+                query.Parameters.AddWithValue("@gender", "Female");
+            }
+
+            query.ExecuteNonQuery();
+
+            adduser?.Invoke(this, e);
+
+            UC_Account uC_Account = new UC_Account();
+            uC_Account.Show();
+            this.Hide();
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

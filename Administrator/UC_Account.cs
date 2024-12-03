@@ -34,11 +34,27 @@ namespace Administrator
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-
+            frmcreateuser frmcreateuser = new frmcreateuser();
+            frmcreateuser.ShowDialog();
+            this.Hide();
         }
 
         private void Archived_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void UC_Account_Load(object sender, EventArgs e)
+        {
+            WatchupongConnections.Instance.Open();
+            var reader = WatchupongConnections.Instance.ExecuteReader
+                ("SELECT UserID, Name, Email, Password, Role, Gender FROM User_Information ");
+            while(reader.Read())
+            {
+               dtgAccount.Rows.Add(reader.GetValue(0),reader.GetValue(1),reader.GetValue(2),reader.GetValue(3),reader.GetValue(4),reader.GetValue(5),"Active","Edit");
+            }
+            reader.Close();
+            WatchupongConnections.Instance.Close();
 
         }
     }
