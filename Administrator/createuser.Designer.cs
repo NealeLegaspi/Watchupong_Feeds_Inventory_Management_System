@@ -216,6 +216,7 @@
             cbrole.Font = new Font("Segoe UI", 10F);
             cbrole.ForeColor = Color.FromArgb(68, 88, 112);
             cbrole.ItemHeight = 30;
+            cbrole.Items.AddRange(new object[] { "Admin", "Cashier" });
             cbrole.Location = new Point(26, 386);
             cbrole.Name = "cbrole";
             cbrole.ShadowDecoration.CustomizableEdges = customizableEdges8;

@@ -34,7 +34,7 @@ namespace Administrator
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            frmcreateuser frmcreateuser = new frmcreateuser();
+            createuser frmcreateuser = new createuser();
             frmcreateuser.ShowDialog();
             this.Hide();
         }
@@ -48,7 +48,7 @@ namespace Administrator
         {
             WatchupongConnections.Instance.Open();
             var reader = WatchupongConnections.Instance.ExecuteReader
-                ("SELECT UserID, Name, Email, Password, Role, Gender FROM User_Information ");
+                ("SELECT Name,Username, Email, Password, Role, Gender FROM User_Information ");
             while(reader.Read())
             {
                dtgAccount.Rows.Add(reader.GetValue(0),reader.GetValue(1),reader.GetValue(2),reader.GetValue(3),reader.GetValue(4),reader.GetValue(5),"Active","Edit");
