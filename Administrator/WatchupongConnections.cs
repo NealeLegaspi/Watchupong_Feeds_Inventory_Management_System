@@ -18,7 +18,7 @@ namespace Administrator
         private SqlCommand _sqlcom;
 
         // Connection string (you can change this to your actual connection string)
-        private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\legas\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\new wacthupong 2\\Administrator\\Wacthupong.mdf\";Integrated Security=True";
+        private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
 
         // Private constructor to prevent external instantiation
         private WatchupongConnections()

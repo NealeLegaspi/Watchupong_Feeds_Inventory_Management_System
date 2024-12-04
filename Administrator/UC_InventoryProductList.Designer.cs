@@ -44,9 +44,8 @@
             Product_ID = new DataGridViewTextBoxColumn();
             Product_Name = new DataGridViewTextBoxColumn();
             Grams = new DataGridViewTextBoxColumn();
-            InStocks = new DataGridViewTextBoxColumn();
             Price = new DataGridViewTextBoxColumn();
-            Stock_Status = new DataGridViewTextBoxColumn();
+            Quantity = new DataGridViewTextBoxColumn();
             Mfg_Date = new DataGridViewTextBoxColumn();
             Exp_Date = new DataGridViewTextBoxColumn();
             Actions = new DataGridViewTextBoxColumn();
@@ -103,12 +102,13 @@
             btnAddProduct.Size = new Size(125, 32);
             btnAddProduct.TabIndex = 14;
             btnAddProduct.Text = "Add Product";
+            btnAddProduct.Click += btnAddProduct_Click;
             // 
             // dtgInventory
             // 
             dtgInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgInventory.Columns.AddRange(new DataGridViewColumn[] { Product_ID, Product_Name, Grams, InStocks, Price, Stock_Status, Mfg_Date, Exp_Date, Actions });
+            dtgInventory.Columns.AddRange(new DataGridViewColumn[] { Product_ID, Product_Name, Grams, Price, Quantity, Mfg_Date, Exp_Date, Actions });
             dtgInventory.Location = new Point(13, 84);
             dtgInventory.Margin = new Padding(3, 2, 3, 2);
             dtgInventory.Name = "dtgInventory";
@@ -134,23 +134,17 @@
             Grams.MinimumWidth = 6;
             Grams.Name = "Grams";
             // 
-            // InStocks
-            // 
-            InStocks.HeaderText = "InStocks";
-            InStocks.MinimumWidth = 6;
-            InStocks.Name = "InStocks";
-            // 
             // Price
             // 
             Price.HeaderText = "Price";
             Price.MinimumWidth = 6;
             Price.Name = "Price";
             // 
-            // Stock_Status
+            // Quantity
             // 
-            Stock_Status.HeaderText = "Stock_Status";
-            Stock_Status.MinimumWidth = 6;
-            Stock_Status.Name = "Stock_Status";
+            Quantity.HeaderText = "Quantiy";
+            Quantity.MinimumWidth = 6;
+            Quantity.Name = "Quantity";
             // 
             // Mfg_Date
             // 
@@ -188,6 +182,7 @@
             btnProductList.Size = new Size(125, 32);
             btnProductList.TabIndex = 12;
             btnProductList.Text = "Product List";
+            btnProductList.Click += btnProductList_Click;
             // 
             // btnStock
             // 
@@ -231,16 +226,15 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button btnAddProduct;
         private DataGridView dtgInventory;
+        private Guna.UI2.WinForms.Guna2Button btnProductList;
+        private Guna.UI2.WinForms.Guna2Button btnStock;
         private DataGridViewTextBoxColumn Product_ID;
         private DataGridViewTextBoxColumn Product_Name;
         private DataGridViewTextBoxColumn Grams;
-        private DataGridViewTextBoxColumn InStocks;
         private DataGridViewTextBoxColumn Price;
-        private DataGridViewTextBoxColumn Stock_Status;
+        private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn Mfg_Date;
         private DataGridViewTextBoxColumn Exp_Date;
         private DataGridViewTextBoxColumn Actions;
-        private Guna.UI2.WinForms.Guna2Button btnProductList;
-        private Guna.UI2.WinForms.Guna2Button btnStock;
     }
 }

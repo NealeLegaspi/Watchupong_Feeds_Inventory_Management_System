@@ -34,12 +34,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_OrderHistory));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dtgOrderHistory = new DataGridView();
-            Customer_ID = new DataGridViewTextBoxColumn();
-            Product_ID = new DataGridViewTextBoxColumn();
-            Payment = new DataGridViewTextBoxColumn();
-            Date_Time = new DataGridViewTextBoxColumn();
-            Order_Status = new DataGridViewTextBoxColumn();
-            Total = new DataGridViewTextBoxColumn();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Archived = new Guna.UI2.WinForms.Guna2Button();
             txtOHSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,7 +44,6 @@
             // 
             dtgOrderHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgOrderHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgOrderHistory.Columns.AddRange(new DataGridViewColumn[] { Customer_ID, Product_ID, Payment, Date_Time, Order_Status, Total });
             dtgOrderHistory.Location = new Point(12, 57);
             dtgOrderHistory.Margin = new Padding(3, 2, 3, 2);
             dtgOrderHistory.Name = "dtgOrderHistory";
@@ -58,42 +51,6 @@
             dtgOrderHistory.Size = new Size(1134, 485);
             dtgOrderHistory.TabIndex = 0;
             dtgOrderHistory.CellContentClick += dtgOrderHistory_CellContentClick;
-            // 
-            // Customer_ID
-            // 
-            Customer_ID.HeaderText = "Customer_ID";
-            Customer_ID.MinimumWidth = 6;
-            Customer_ID.Name = "Customer_ID";
-            // 
-            // Product_ID
-            // 
-            Product_ID.HeaderText = "Product_ID";
-            Product_ID.MinimumWidth = 6;
-            Product_ID.Name = "Product_ID";
-            // 
-            // Payment
-            // 
-            Payment.HeaderText = "Payment";
-            Payment.MinimumWidth = 6;
-            Payment.Name = "Payment";
-            // 
-            // Date_Time
-            // 
-            Date_Time.HeaderText = "Date & Time";
-            Date_Time.MinimumWidth = 6;
-            Date_Time.Name = "Date_Time";
-            // 
-            // Order_Status
-            // 
-            Order_Status.HeaderText = "Order_Status";
-            Order_Status.MinimumWidth = 6;
-            Order_Status.Name = "Order_Status";
-            // 
-            // Total
-            // 
-            Total.HeaderText = "Total";
-            Total.MinimumWidth = 6;
-            Total.Name = "Total";
             // 
             // guna2HtmlLabel1
             // 
@@ -169,12 +126,6 @@
         #endregion
 
         private DataGridView dtgOrderHistory;
-        private DataGridViewTextBoxColumn Customer_ID;
-        private DataGridViewTextBoxColumn Product_ID;
-        private DataGridViewTextBoxColumn Payment;
-        private DataGridViewTextBoxColumn Date_Time;
-        private DataGridViewTextBoxColumn Order_Status;
-        private DataGridViewTextBoxColumn Total;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button Archived;
         private Guna.UI2.WinForms.Guna2TextBox txtOHSearchBar;
