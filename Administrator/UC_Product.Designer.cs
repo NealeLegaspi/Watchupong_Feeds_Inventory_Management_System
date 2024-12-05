@@ -58,6 +58,7 @@
             pbProductImage.Size = new Size(213, 148);
             pbProductImage.TabIndex = 0;
             pbProductImage.TabStop = false;
+            pbProductImage.Click += pbProductImage_Click;
             // 
             // btn50g
             // 
@@ -77,7 +78,6 @@
             btn50g.Size = new Size(103, 28);
             btn50g.TabIndex = 1;
             btn50g.Text = "50g";
-
             // 
             // btn100g
             // 

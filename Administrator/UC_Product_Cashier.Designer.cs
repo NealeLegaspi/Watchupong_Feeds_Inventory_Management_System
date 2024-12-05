@@ -81,6 +81,7 @@
             Controls.Add(flowLayoutPanel1);
             Name = "UC_Product_Cashier";
             Size = new Size(1160, 598);
+            Load += UC_Product_Cashier_Load_1;
             ResumeLayout(false);
             PerformLayout();
         }

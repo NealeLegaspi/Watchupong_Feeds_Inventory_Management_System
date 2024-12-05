@@ -15,6 +15,7 @@ namespace Administrator
     public partial class UC_Product : UserControl
     {
         // Add properties
+        public static event EventHandler Onselect;
         public string ProductName
         {
             get { return lblProductName.Text; }
@@ -36,6 +37,11 @@ namespace Administrator
         public UC_Product()
         {
             InitializeComponent();
+        }
+
+        private void pbProductImage_Click(object sender, EventArgs e)
+        {
+            Onselect?.Invoke(this, e);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Administrator
         private SqlConnection _sqlcon;
         private SqlCommand _sqlcom;
 
-        public readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
+        public readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\legas\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
 
         private WatchupongConnections()
         {
@@ -69,14 +69,11 @@ namespace Administrator
             Open(); 
             _sqlcom = new SqlCommand(query, _sqlcon);
 
-            try
-            {
+     
+            
                 return _sqlcom.ExecuteReader();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error executing query: {ex.Message}", ex);
-            }
+            
+
         }
 
         public int ExecuteNonQuery(string query)

@@ -21,7 +21,7 @@ namespace Administrator
 
         public loginQuery()
         {
-            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\legas\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
             sqlConnect = new SqlConnection(connectionString);
             dataTable = new DataTable();
             bindingSource = new BindingSource();
@@ -30,13 +30,13 @@ namespace Administrator
         
             public bool LoginValidationAdmin(string user, string password)
             {
-                connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
+                connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\legas\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
                 
                 using (SqlConnection sqlConnect = new SqlConnection(connectionString))
                 {
                         sqlConnect.Open();
 
-                        using (SqlCommand sqlCommand = new SqlCommand("SELECT Username, Password FROM User_Information WHERE Username = @user AND Password = @password", sqlConnect))
+                        using (SqlCommand sqlCommand = new SqlCommand("SELECT Username, Password FROM Admin_Account WHERE Username = @user AND Password = @password", sqlConnect))
                         {
                             sqlCommand.Parameters.AddWithValue("@user", user);
                             sqlCommand.Parameters.AddWithValue("@password", password);
@@ -67,13 +67,13 @@ namespace Administrator
 
         public bool LoginValidationCashier(string user, string password)
         {
-            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\legas\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
 
             using (SqlConnection sqlConnect = new SqlConnection(connectionString))
             {
                 sqlConnect.Open();
 
-                using (SqlCommand sqlCommand = new SqlCommand("SELECT Username, Password FROM CashierAccount  WHERE Username = @user AND Password = @password", sqlConnect))
+                using (SqlCommand sqlCommand = new SqlCommand("SELECT Username, Password FROM Cashier_Account  WHERE Username = @user AND Password = @password", sqlConnect))
                 {
                     sqlCommand.Parameters.AddWithValue("@user", user);
                     sqlCommand.Parameters.AddWithValue("@password", password);

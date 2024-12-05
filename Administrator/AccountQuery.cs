@@ -22,7 +22,7 @@ namespace Administrator
 
         public AccountQuery()
         {
-            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\legas\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
             sqlConnect = new SqlConnection(connectionString);
             dataTable = new DataTable();
             bindingSource = new BindingSource();
@@ -30,7 +30,7 @@ namespace Administrator
 
         public void DisplayList()
         {
-            string ViewClubMembers = "SELECT * FROM CashierAccount";
+            string ViewClubMembers = "SELECT * FROM Cashier_Account";
             sqlAdapter = new SqlDataAdapter(ViewClubMembers, connectionString);
             dataTable.Clear();
             sqlAdapter.Fill(dataTable);
