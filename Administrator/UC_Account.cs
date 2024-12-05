@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,8 @@ namespace Administrator
         {
             InitializeComponent();
         }
+        static AccountQuery accQuery = new AccountQuery();
+
 
         private void dtgAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -34,6 +37,8 @@ namespace Administrator
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
+
+
             createuser frmcreateuser = new createuser();
             frmcreateuser.ShowDialog();
             this.Hide();
@@ -46,15 +51,20 @@ namespace Administrator
 
         private void UC_Account_Load(object sender, EventArgs e)
         {
-            WatchupongConnections.Instance.Open();
-            var reader = WatchupongConnections.Instance.ExecuteReader
-                ("SELECT Name,Username, Email, Password, Role, Gender FROM User_Information ");
-            while(reader.Read())
-            {
-               dtgAccount.Rows.Add(reader.GetValue(0),reader.GetValue(1),reader.GetValue(2),reader.GetValue(3),reader.GetValue(4),reader.GetValue(5),"Active","Edit");
-            }
-            reader.Close();
-            WatchupongConnections.Instance.Close();
+
+            RefreshAccount();
+        }
+
+        public void RefreshAccount()
+        {
+            accQuery.DisplayList();
+            dataGridView1.DataSource = accQuery.bindingSource;
+        }
+
+    
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

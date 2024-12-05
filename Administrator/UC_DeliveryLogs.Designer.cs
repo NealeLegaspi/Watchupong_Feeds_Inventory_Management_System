@@ -107,7 +107,6 @@
             btnArchived.Size = new Size(116, 32);
             btnArchived.TabIndex = 9;
             btnArchived.Text = "Archived";
-            btnArchived.Click += btnArchived_Click;
             // 
             // btnSearch
             // 
@@ -117,7 +116,6 @@
             btnSearch.TabIndex = 10;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
             // 
             // UC_DeliveryLogs
             // 

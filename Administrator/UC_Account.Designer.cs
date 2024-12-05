@@ -35,20 +35,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            dtgAccount = new DataGridView();
             Archived = new Guna.UI2.WinForms.Guna2Button();
-            Name = new DataGridViewTextBoxColumn();
-            Username = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            E_Mail = new DataGridViewTextBoxColumn();
-            Role = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Status = new DataGridViewTextBoxColumn();
-            Edit = new DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)dtgAccount).BeginInit();
+            dataGridView1 = new DataGridView();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnAddUser
@@ -108,19 +106,6 @@
             guna2TextBox1.TabIndex = 4;
             guna2TextBox1.TextChanged += guna2TextBox1_TextChanged;
             // 
-            // dtgAccount
-            // 
-            dtgAccount.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dtgAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgAccount.Columns.AddRange(new DataGridViewColumn[] { Name, Username, Column2, E_Mail, Role, Column1, Status, Edit });
-            dtgAccount.Location = new Point(17, 59);
-            dtgAccount.Margin = new Padding(3, 2, 3, 2);
-            dtgAccount.Name = "dtgAccount";
-            dtgAccount.RowHeadersWidth = 51;
-            dtgAccount.Size = new Size(1134, 485);
-            dtgAccount.TabIndex = 5;
-            dtgAccount.CellContentClick += dtgAccount_CellContentClick;
-            // 
             // Archived
             // 
             Archived.BorderRadius = 10;
@@ -133,7 +118,7 @@
             Archived.FillColor = Color.LightGray;
             Archived.Font = new Font("Segoe UI", 9F);
             Archived.ForeColor = Color.Black;
-            Archived.Location = new Point(1035, 549);
+            Archived.Location = new Point(17, 550);
             Archived.Name = "Archived";
             Archived.ShadowDecoration.CustomizableEdges = customizableEdges6;
             Archived.Size = new Size(116, 32);
@@ -141,70 +126,71 @@
             Archived.Text = "Archived";
             Archived.Click += Archived_Click;
             // 
-            // Name
+            // dataGridView1
             // 
-            Name.HeaderText = "Name";
-            Name.MinimumWidth = 6;
-            Name.Name = "Name";
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(17, 56);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(1124, 474);
+            dataGridView1.TabIndex = 8;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // Username
+            // guna2Button2
             // 
-            Username.HeaderText = "Username";
-            Username.MinimumWidth = 6;
-            Username.Name = "Username";
+            guna2Button2.BorderRadius = 10;
+            guna2Button2.CustomizableEdges = customizableEdges7;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.FromArgb(255, 128, 128);
+            guna2Button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.ForeColor = Color.Black;
+            guna2Button2.Location = new Point(1045, 550);
+            guna2Button2.Margin = new Padding(3, 2, 3, 2);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button2.Size = new Size(106, 32);
+            guna2Button2.TabIndex = 10;
+            guna2Button2.Text = "Add User";
             // 
-            // Column2
+            // guna2Button1
             // 
-            Column2.HeaderText = "Password";
-            Column2.Name = "Column2";
-            // 
-            // E_Mail
-            // 
-            E_Mail.HeaderText = "E-Mail";
-            E_Mail.MinimumWidth = 6;
-            E_Mail.Name = "E_Mail";
-            // 
-            // Role
-            // 
-            Role.HeaderText = "Role";
-            Role.MinimumWidth = 6;
-            Role.Name = "Role";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Gender";
-            Column1.Name = "Column1";
-            // 
-            // Status
-            // 
-            Status.HeaderText = "Status";
-            Status.MinimumWidth = 6;
-            Status.Name = "Status";
-            // 
-            // Edit
-            // 
-            Edit.HeaderText = "Edit";
-            Edit.MinimumWidth = 6;
-            Edit.Name = "Edit";
-            Edit.Resizable = DataGridViewTriState.True;
-            Edit.SortMode = DataGridViewColumnSortMode.Automatic;
-            Edit.Text = "Edit";
+            guna2Button1.BorderRadius = 10;
+            guna2Button1.CustomizableEdges = customizableEdges9;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(128, 255, 128);
+            guna2Button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.Black;
+            guna2Button1.Location = new Point(929, 550);
+            guna2Button1.Margin = new Padding(3, 2, 3, 2);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Button1.Size = new Size(106, 32);
+            guna2Button1.TabIndex = 11;
+            guna2Button1.Text = "Edit";
             // 
             // UC_Account
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(guna2Button1);
+            Controls.Add(guna2Button2);
+            Controls.Add(dataGridView1);
             Controls.Add(Archived);
-            Controls.Add(dtgAccount);
             Controls.Add(guna2TextBox1);
             Controls.Add(label1);
             Controls.Add(btnAddUser);
             ForeColor = SystemColors.ControlText;
             Margin = new Padding(3, 2, 3, 2);
-            
+            Name = "UC_Account";
             Size = new Size(1160, 598);
             Load += UC_Account_Load;
-            ((System.ComponentModel.ISupportInitialize)dtgAccount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -213,15 +199,9 @@
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private DataGridView dtgAccount;
         private Guna.UI2.WinForms.Guna2Button Archived;
-        private DataGridViewTextBoxColumn Name;
-        private DataGridViewTextBoxColumn Username;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn E_Mail;
-        private DataGridViewTextBoxColumn Role;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Status;
-        private DataGridViewButtonColumn Edit;
+        private DataGridView dataGridView1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

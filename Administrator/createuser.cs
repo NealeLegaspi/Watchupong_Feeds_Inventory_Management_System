@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,27 +21,28 @@ namespace Administrator
         public static EventHandler adduser;
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True");
             WatchupongConnections.Instance.Open();
-            var query = WatchupongConnections.Instance.CreateCommand
-                ("INSERT INTO User_Information values (@user,@nm,@email,@pass,@role,@gender,@status)");
-            
-            query.Parameters.AddWithValue("@user", txtuser.Text);
-            query.Parameters.AddWithValue("@nm", $"{txtfirst.Text} {txtlast.Text}");
-            query.Parameters.AddWithValue("@email", txtemail.Text);
-            query.Parameters.AddWithValue("@pass", txtpass.Text);
-            query.Parameters.AddWithValue("@role", cbrole.Text);
+           SqlCommand sqlconn = new SqlCommand("INSERT INTO CashierAccount(Name, Username, Password, Email, Gender, Status ) values (@nm,@user,@pass,@email,@gender,@status)",conn);
 
-            query.Parameters.AddWithValue("@status", "Active");
+            
+            sqlconn.Parameters.AddWithValue("@user", txtuser.Text);
+            sqlconn.Parameters.AddWithValue("@nm", $"{txtfirst.Text} {txtlast.Text}");
+            sqlconn.Parameters.AddWithValue("@email", txtemail.Text);
+            sqlconn.Parameters.AddWithValue("@pass", txtpass.Text);
+            sqlconn.Parameters.AddWithValue("@status", "Active");
             if (rbMale.Checked)
             {
-                query.Parameters.AddWithValue("@gender", "Male");
+                sqlconn.Parameters.AddWithValue("@gender", "Male");
             }
             else
             {
-                query.Parameters.AddWithValue("@gender", "Female");
+                sqlconn.Parameters.AddWithValue("@gender", "Female");
             }
 
-            query.ExecuteNonQuery();
+            conn.Open();
+            sqlconn.ExecuteNonQuery();
+            conn.Close();
 
             adduser?.Invoke(this, e);
 

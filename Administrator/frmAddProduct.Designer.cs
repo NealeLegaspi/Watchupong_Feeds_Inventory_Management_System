@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,6 +42,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtproductname = new Guna.UI2.WinForms.Guna2TextBox();
             txtGrams = new Guna.UI2.WinForms.Guna2TextBox();
@@ -62,6 +66,11 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            dtpManufacturingDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpExpirationDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -78,7 +87,7 @@
             // txtproductname
             // 
             txtproductname.BorderRadius = 10;
-            txtproductname.CustomizableEdges = customizableEdges19;
+            txtproductname.CustomizableEdges = customizableEdges23;
             txtproductname.DefaultText = "";
             txtproductname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtproductname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -92,14 +101,14 @@
             txtproductname.PasswordChar = '\0';
             txtproductname.PlaceholderText = "";
             txtproductname.SelectedText = "";
-            txtproductname.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtproductname.ShadowDecoration.CustomizableEdges = customizableEdges24;
             txtproductname.Size = new Size(264, 36);
             txtproductname.TabIndex = 40;
             // 
             // txtGrams
             // 
             txtGrams.BorderRadius = 10;
-            txtGrams.CustomizableEdges = customizableEdges21;
+            txtGrams.CustomizableEdges = customizableEdges25;
             txtGrams.DefaultText = "";
             txtGrams.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtGrams.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -113,14 +122,14 @@
             txtGrams.PasswordChar = '\0';
             txtGrams.PlaceholderText = "";
             txtGrams.SelectedText = "";
-            txtGrams.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtGrams.ShadowDecoration.CustomizableEdges = customizableEdges26;
             txtGrams.Size = new Size(106, 36);
             txtGrams.TabIndex = 41;
             // 
             // txtPrice
             // 
             txtPrice.BorderRadius = 10;
-            txtPrice.CustomizableEdges = customizableEdges23;
+            txtPrice.CustomizableEdges = customizableEdges27;
             txtPrice.DefaultText = "";
             txtPrice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPrice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -134,14 +143,14 @@
             txtPrice.PasswordChar = '\0';
             txtPrice.PlaceholderText = "";
             txtPrice.SelectedText = "";
-            txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges28;
             txtPrice.Size = new Size(106, 36);
             txtPrice.TabIndex = 42;
             // 
             // txtQuantity
             // 
             txtQuantity.BorderRadius = 10;
-            txtQuantity.CustomizableEdges = customizableEdges25;
+            txtQuantity.CustomizableEdges = customizableEdges29;
             txtQuantity.DefaultText = "";
             txtQuantity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtQuantity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -155,7 +164,7 @@
             txtQuantity.PasswordChar = '\0';
             txtQuantity.PlaceholderText = "";
             txtQuantity.SelectedText = "";
-            txtQuantity.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            txtQuantity.ShadowDecoration.CustomizableEdges = customizableEdges30;
             txtQuantity.Size = new Size(106, 36);
             txtQuantity.TabIndex = 43;
             // 
@@ -199,16 +208,16 @@
             // 
             dtpdd.BorderRadius = 10;
             dtpdd.Checked = true;
-            dtpdd.CustomizableEdges = customizableEdges27;
+            dtpdd.CustomizableEdges = customizableEdges31;
             dtpdd.FillColor = Color.FromArgb(224, 224, 224);
             dtpdd.Font = new Font("Segoe UI", 9F);
             dtpdd.Format = DateTimePickerFormat.Long;
-            dtpdd.Location = new Point(12, 272);
+            dtpdd.Location = new Point(12, 262);
             dtpdd.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpdd.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpdd.Name = "dtpdd";
-            dtpdd.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            dtpdd.Size = new Size(218, 30);
+            dtpdd.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            dtpdd.Size = new Size(202, 30);
             dtpdd.TabIndex = 51;
             dtpdd.Value = new DateTime(2024, 12, 2, 23, 38, 38, 881);
             // 
@@ -224,18 +233,18 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.BorderRadius = 10;
-            guna2PictureBox1.CustomizableEdges = customizableEdges29;
+            guna2PictureBox1.CustomizableEdges = customizableEdges33;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(287, 272);
+            guna2PictureBox1.Location = new Point(298, 329);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges34;
             guna2PictureBox1.Size = new Size(167, 132);
             guna2PictureBox1.TabIndex = 56;
             guna2PictureBox1.TabStop = false;
             // 
             // rtbDescription
             // 
-            rtbDescription.Location = new Point(12, 328);
+            rtbDescription.Location = new Point(12, 395);
             rtbDescription.Name = "rtbDescription";
             rtbDescription.Size = new Size(235, 114);
             rtbDescription.TabIndex = 57;
@@ -244,7 +253,7 @@
             // guna2Button1
             // 
             guna2Button1.BorderRadius = 5;
-            guna2Button1.CustomizableEdges = customizableEdges31;
+            guna2Button1.CustomizableEdges = customizableEdges35;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -252,9 +261,9 @@
             guna2Button1.FillColor = Color.Silver;
             guna2Button1.Font = new Font("Segoe UI", 9F);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(325, 423);
+            guna2Button1.Location = new Point(326, 479);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges36;
             guna2Button1.Size = new Size(92, 30);
             guna2Button1.TabIndex = 58;
             guna2Button1.Text = "Browse";
@@ -262,7 +271,7 @@
             // guna2Button2
             // 
             guna2Button2.BorderRadius = 5;
-            guna2Button2.CustomizableEdges = customizableEdges33;
+            guna2Button2.CustomizableEdges = customizableEdges37;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -270,9 +279,9 @@
             guna2Button2.FillColor = Color.FromArgb(192, 0, 0);
             guna2Button2.Font = new Font("Segoe UI", 9F);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(207, 497);
+            guna2Button2.Location = new Point(249, 521);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges38;
             guna2Button2.Size = new Size(105, 31);
             guna2Button2.TabIndex = 59;
             guna2Button2.Text = "Cancel";
@@ -280,7 +289,7 @@
             // guna2Button3
             // 
             guna2Button3.BorderRadius = 5;
-            guna2Button3.CustomizableEdges = customizableEdges35;
+            guna2Button3.CustomizableEdges = customizableEdges39;
             guna2Button3.DisabledState.BorderColor = Color.DarkGray;
             guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -288,19 +297,85 @@
             guna2Button3.FillColor = Color.FromArgb(0, 192, 0);
             guna2Button3.Font = new Font("Segoe UI", 9F);
             guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(345, 497);
+            guna2Button3.Location = new Point(360, 521);
             guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges40;
             guna2Button3.Size = new Size(105, 31);
             guna2Button3.TabIndex = 60;
             guna2Button3.Text = "Submit";
             guna2Button3.Click += guna2Button3_Click_1;
+            // 
+            // dtpManufacturingDate
+            // 
+            dtpManufacturingDate.BorderRadius = 10;
+            dtpManufacturingDate.Checked = true;
+            dtpManufacturingDate.CustomizableEdges = customizableEdges41;
+            dtpManufacturingDate.FillColor = Color.FromArgb(224, 224, 224);
+            dtpManufacturingDate.Font = new Font("Segoe UI", 9F);
+            dtpManufacturingDate.Format = DateTimePickerFormat.Long;
+            dtpManufacturingDate.Location = new Point(242, 262);
+            dtpManufacturingDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpManufacturingDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpManufacturingDate.Name = "dtpManufacturingDate";
+            dtpManufacturingDate.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            dtpManufacturingDate.Size = new Size(202, 30);
+            dtpManufacturingDate.TabIndex = 61;
+            dtpManufacturingDate.Value = new DateTime(2024, 12, 2, 23, 38, 38, 881);
+            // 
+            // dtpExpirationDate
+            // 
+            dtpExpirationDate.BorderRadius = 10;
+            dtpExpirationDate.Checked = true;
+            dtpExpirationDate.CustomizableEdges = customizableEdges43;
+            dtpExpirationDate.FillColor = Color.FromArgb(224, 224, 224);
+            dtpExpirationDate.Font = new Font("Segoe UI", 9F);
+            dtpExpirationDate.Format = DateTimePickerFormat.Long;
+            dtpExpirationDate.Location = new Point(12, 329);
+            dtpExpirationDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpExpirationDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpExpirationDate.Name = "dtpExpirationDate";
+            dtpExpirationDate.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            dtpExpirationDate.Size = new Size(202, 30);
+            dtpExpirationDate.TabIndex = 62;
+            dtpExpirationDate.Value = new DateTime(2024, 12, 2, 23, 38, 38, 881);
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Location = new Point(249, 239);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(109, 17);
+            guna2HtmlLabel1.TabIndex = 63;
+            guna2HtmlLabel1.Text = "Manufacturing Date";
+            // 
+            // guna2HtmlLabel6
+            // 
+            guna2HtmlLabel6.BackColor = Color.Transparent;
+            guna2HtmlLabel6.Location = new Point(12, 306);
+            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            guna2HtmlLabel6.Size = new Size(83, 17);
+            guna2HtmlLabel6.TabIndex = 64;
+            guna2HtmlLabel6.Text = "Expiration Date";
+            // 
+            // guna2HtmlLabel8
+            // 
+            guna2HtmlLabel8.BackColor = Color.Transparent;
+            guna2HtmlLabel8.Location = new Point(12, 372);
+            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            guna2HtmlLabel8.Size = new Size(63, 17);
+            guna2HtmlLabel8.TabIndex = 65;
+            guna2HtmlLabel8.Text = "Description";
             // 
             // frmAddProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(477, 564);
+            Controls.Add(guna2HtmlLabel8);
+            Controls.Add(guna2HtmlLabel6);
+            Controls.Add(guna2HtmlLabel1);
+            Controls.Add(dtpExpirationDate);
+            Controls.Add(dtpManufacturingDate);
             Controls.Add(guna2Button3);
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
@@ -318,6 +393,7 @@
             Controls.Add(txtproductname);
             Controls.Add(guna2HtmlLabel7);
             Name = "frmAddProduct";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAddProduct";
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
@@ -341,5 +417,10 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpManufacturingDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpExpirationDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
     }
 }

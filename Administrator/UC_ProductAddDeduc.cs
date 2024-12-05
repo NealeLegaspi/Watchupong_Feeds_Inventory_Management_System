@@ -21,6 +21,11 @@ namespace Administrator
         private decimal Price50g;
         private decimal Price100g;
 
+        private void UC_ProductAddDeduc_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public string GetProductName
         {
             get { return ProductName; }

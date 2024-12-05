@@ -16,5 +16,15 @@ namespace Administrator
         {
             InitializeComponent();
         }
+
+        private void dtgHome_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UC_Home_Cashier_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

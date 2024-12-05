@@ -101,7 +101,6 @@
             label1.Size = new Size(69, 25);
             label1.TabIndex = 8;
             label1.Text = "Admin";
-            label1.Click += label1_Click;
             // 
             // pictureBox1
             // 

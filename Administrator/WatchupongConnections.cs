@@ -1,32 +1,26 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using Microsoft.Data.SqlClient;
+using System;
 
 namespace Administrator
 {
     internal class WatchupongConnections
     {
-
         private static WatchupongConnections _instance;
-        private static readonly object _lock = new object(); // Ensures thread safety
+        private static readonly object _lock = new object();
 
-        // SqlConnection and SqlCommand fields
         private SqlConnection _sqlcon;
         private SqlCommand _sqlcom;
 
-        // Connection string (you can change this to your actual connection string)
-        private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
+        public readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
 
-        // Private constructor to prevent external instantiation
         private WatchupongConnections()
         {
             _sqlcon = new SqlConnection(_connectionString);
         }
 
-        // Public method to get the single instance of the connection class
         public static WatchupongConnections Instance
         {
             get
@@ -42,7 +36,12 @@ namespace Administrator
             }
         }
 
-        // Public method to open the connection
+        public string ConnectionString
+        {
+            get { return _connectionString; }
+        }
+
+        // Method to open the SQL connection
         public void Open()
         {
             if (_sqlcon.State == System.Data.ConnectionState.Closed)
@@ -51,7 +50,6 @@ namespace Administrator
             }
         }
 
-        // Public method to close the connection
         public void Close()
         {
             if (_sqlcon.State == System.Data.ConnectionState.Open)
@@ -59,29 +57,42 @@ namespace Administrator
                 _sqlcon.Close();
             }
         }
-
-        // Method to create a SqlCommand with the current connection
         public SqlCommand CreateCommand(string query)
         {
             Open();
             _sqlcom = new SqlCommand(query, _sqlcon);
             return _sqlcom;
         }
+
         public SqlDataReader ExecuteReader(string query)
         {
-            Open(); // Ensure the connection is open
+            Open(); 
             _sqlcom = new SqlCommand(query, _sqlcon);
 
             try
             {
-                // Execute the query and return the SqlDataReader
                 return _sqlcom.ExecuteReader();
             }
-            finally
+            catch (Exception ex)
             {
-                // Close the command regardless of exceptions (recommended practice)
-                _sqlcom.Dispose();
+                throw new Exception($"Error executing query: {ex.Message}", ex);
+            }
+        }
+
+        public int ExecuteNonQuery(string query)
+        {
+            Open();
+            _sqlcom = new SqlCommand(query, _sqlcon);
+
+            try
+            {
+                return _sqlcom.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error executing non-query: {ex.Message}", ex);
             }
         }
     }
 }
+

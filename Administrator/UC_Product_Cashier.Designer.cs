@@ -28,39 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowLayoutPanel2 = new FlowLayoutPanel();
             label1 = new Label();
             label2 = new Label();
-            PanelListOfProduct = new FlowLayoutPanel();
             SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = SystemColors.ControlDark;
+            flowLayoutPanel1.Location = new Point(3, 37);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(765, 558);
+            flowLayoutPanel1.TabIndex = 0;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.BackColor = SystemColors.ControlDark;
+            flowLayoutPanel2.Location = new Point(774, 37);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(383, 561);
+            flowLayoutPanel2.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 18.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(14, 21);
+            label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(3, 4);
             label1.Name = "label1";
-            label1.Size = new Size(137, 31);
-            label1.TabIndex = 5;
-            label1.Text = "Products";
+            label1.Size = new Size(109, 30);
+            label1.TabIndex = 2;
+            label1.Text = "PRODUCT";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 14F, FontStyle.Bold);
-            label2.Location = new Point(1059, 29);
+            label2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(774, 4);
             label2.Name = "label2";
-            label2.Size = new Size(91, 23);
-            label2.TabIndex = 6;
-            label2.Text = "Cashier";
-            // 
-            // PanelListOfProduct
-            // 
-            PanelListOfProduct.BackColor = SystemColors.ActiveBorder;
-            PanelListOfProduct.Location = new Point(739, 57);
-            PanelListOfProduct.Margin = new Padding(3, 2, 3, 2);
-            PanelListOfProduct.Name = "PanelListOfProduct";
-            PanelListOfProduct.Size = new Size(423, 631);
-            PanelListOfProduct.TabIndex = 1;
+            label2.Size = new Size(65, 30);
+            label2.TabIndex = 3;
+            label2.Text = "CART";
             // 
             // UC_Product_Cashier
             // 
@@ -68,18 +77,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(PanelListOfProduct);
-            Margin = new Padding(3, 2, 3, 2);
+            Controls.Add(flowLayoutPanel2);
+            Controls.Add(flowLayoutPanel1);
             Name = "UC_Product_Cashier";
-            Size = new Size(1162, 688);
-            Load += UC_Product_Cashier_Load;
+            Size = new Size(1160, 598);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
+
+        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flowLayoutPanel2;
         private Label label1;
         private Label label2;
-        private FlowLayoutPanel PanelListOfProduct;
     }
 }

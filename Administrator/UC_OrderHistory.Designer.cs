@@ -118,6 +118,7 @@
             Name = "UC_OrderHistory";
             RightToLeft = RightToLeft.No;
             Size = new Size(1160, 598);
+            Load += UC_OrderHistory_Load;
             ((System.ComponentModel.ISupportInitialize)dtgOrderHistory).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -359,3 +359,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Administrator/WatchupongConnections.mdf
+/Administrator/WatchupongConnections_log.ldf

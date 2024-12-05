@@ -42,6 +42,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(14, 366);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
@@ -49,6 +50,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(677, 208);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // guna2HtmlLabel1
             // 
@@ -132,6 +134,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Home";
             Size = new Size(1160, 598);
+            Load += UC_Home_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();

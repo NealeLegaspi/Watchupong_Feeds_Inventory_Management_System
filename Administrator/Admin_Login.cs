@@ -9,19 +9,24 @@ namespace Administrator
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Home_Dashboard HD = new Home_Dashboard();
-            HD.Show();
+            if (cmbRole.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a role from the Role.", "Role Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return;
+            }
+            else if (cmbRole.SelectedItem.ToString() == "Admin")
+            {
+                loginQuery login = new loginQuery();
+                login.LoginValidationAdmin(guna2TextBox2.Text, guna2TextBox1.Text);
+            }
+            else if (cmbRole.SelectedItem.ToString() == "Cashier")
+            {
+                loginQuery login = new loginQuery();
+                login.LoginValidationCashier(guna2TextBox2.Text, guna2TextBox1.Text);
+            }
             this.Hide();
         }
 
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

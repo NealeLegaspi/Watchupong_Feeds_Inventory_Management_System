@@ -39,21 +39,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnStock = new Guna.UI2.WinForms.Guna2Button();
             btnProductList = new Guna.UI2.WinForms.Guna2Button();
-            dtgInventory = new DataGridView();
             btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             Archived = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            Product_ID = new DataGridViewTextBoxColumn();
-            Product_Name = new DataGridViewTextBoxColumn();
-            Grams = new DataGridViewTextBoxColumn();
-            InStocks = new DataGridViewTextBoxColumn();
-            Price = new DataGridViewTextBoxColumn();
-            Stock_Status = new DataGridViewTextBoxColumn();
-            Actions = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dtgInventory).BeginInit();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnStock
@@ -95,18 +89,6 @@
             btnProductList.TabIndex = 1;
             btnProductList.Text = "Product List";
             btnProductList.Click += btnProductList_Click;
-            // 
-            // dtgInventory
-            // 
-            dtgInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dtgInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgInventory.Columns.AddRange(new DataGridViewColumn[] { Product_ID, Product_Name, Grams, InStocks, Price, Stock_Status, Actions });
-            dtgInventory.Location = new Point(18, 85);
-            dtgInventory.Margin = new Padding(3, 2, 3, 2);
-            dtgInventory.Name = "dtgInventory";
-            dtgInventory.RowHeadersWidth = 51;
-            dtgInventory.Size = new Size(1134, 463);
-            dtgInventory.TabIndex = 2;
             // 
             // btnAddProduct
             // 
@@ -177,64 +159,34 @@
             guna2Button1.TabIndex = 10;
             guna2Button1.Text = "Archived";
             // 
-            // Product_ID
+            // dataGridView1
             // 
-            Product_ID.HeaderText = "ProductId";
-            Product_ID.MinimumWidth = 6;
-            Product_ID.Name = "Product_ID";
-            // 
-            // Product_Name
-            // 
-            Product_Name.HeaderText = "Product_Name";
-            Product_Name.MinimumWidth = 6;
-            Product_Name.Name = "Product_Name";
-            // 
-            // Grams
-            // 
-            Grams.HeaderText = "Grams";
-            Grams.MinimumWidth = 6;
-            Grams.Name = "Grams";
-            // 
-            // InStocks
-            // 
-            InStocks.HeaderText = "InStocks";
-            InStocks.MinimumWidth = 6;
-            InStocks.Name = "InStocks";
-            // 
-            // Price
-            // 
-            Price.HeaderText = "Price";
-            Price.MinimumWidth = 6;
-            Price.Name = "Price";
-            // 
-            // Stock_Status
-            // 
-            Stock_Status.HeaderText = "Stock_Status";
-            Stock_Status.MinimumWidth = 6;
-            Stock_Status.Name = "Stock_Status";
-            // 
-            // Actions
-            // 
-            Actions.HeaderText = "Actions";
-            Actions.MinimumWidth = 6;
-            Actions.Name = "Actions";
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(18, 103);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(1134, 444);
+            dataGridView1.TabIndex = 11;
             // 
             // UC_InventoryStocks
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridView1);
             Controls.Add(guna2Button1);
             Controls.Add(Archived);
             Controls.Add(label1);
             Controls.Add(btnAddProduct);
-            Controls.Add(dtgInventory);
             Controls.Add(btnProductList);
             Controls.Add(btnStock);
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_InventoryStocks";
             RightToLeft = RightToLeft.No;
             Size = new Size(1160, 598);
-            ((System.ComponentModel.ISupportInitialize)dtgInventory).EndInit();
+            Load += UC_InventoryStocks_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -243,17 +195,10 @@
 
         private Guna.UI2.WinForms.Guna2Button btnStock;
         private Guna.UI2.WinForms.Guna2Button btnProductList;
-        private DataGridView dtgInventory;
         private Guna.UI2.WinForms.Guna2Button btnAddProduct;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button Archived;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private DataGridViewTextBoxColumn Product_ID;
-        private DataGridViewTextBoxColumn Product_Name;
-        private DataGridViewTextBoxColumn Grams;
-        private DataGridViewTextBoxColumn InStocks;
-        private DataGridViewTextBoxColumn Price;
-        private DataGridViewTextBoxColumn Stock_Status;
-        private DataGridViewTextBoxColumn Actions;
+        private DataGridView dataGridView1;
     }
 }

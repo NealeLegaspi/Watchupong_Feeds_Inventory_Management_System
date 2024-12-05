@@ -8,62 +8,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Administrator
 {
     public partial class UC_Product : UserControl
     {
+        // Add properties
+        public string ProductName
+        {
+            get { return lblProductName.Text; }
+            set { lblProductName.Text = value; }
+        }
+
+        public decimal Price50g
+        {
+            get { return decimal.Parse(lblPrice50g.Text.Replace("50g: ", "").Replace("$", "")); }
+            set { lblPrice50g.Text = $"50g: ${value}"; }
+        }
+
+        public decimal Price100g
+        {
+            get { return decimal.Parse(lblPrice100g.Text.Replace("100g: ", "").Replace("$", "")); }
+            set { lblPrice100g.Text = $"100g: ${value}"; }
+        }
+
         public UC_Product()
         {
             InitializeComponent();
         }
-
-        private string ProductName;
-        private decimal Price50g;
-        private decimal Price100g;
-        private byte[] ProductImage;
-
-        public static event EventHandler P50g, P100g;                                               
-
-        public string GetProductName
-        {
-            get { return ProductName; }
-            set { ProductName = value; lblProductName.Text = value; }
-        }
-        public decimal GetPrice50g
-        {
-            get { return Price50g; }
-            set { Price50g = value; lblPrice50g.Text = value.ToString(); }
-        }
-        public decimal GetPrice100g
-        {
-            get { return Price100g; }
-            set { Price100g = value; lblPrice100g.Text = value.ToString(); }
-        }
-
-        public byte[] GetProductImage
-        {
-            get { return ProductImage; }
-            set { ProductImage = value; }
-        }
-
-
-
-
-        private void UC_Product_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btn50g_Click(object sender, EventArgs e)
-        {
-            P50g?.Invoke(this, e);
-        }
-
-        private void btn100g_Click(object sender, EventArgs e)
-        {
-            P100g?.Invoke(this, e);
-        }
     }
 }
+
+

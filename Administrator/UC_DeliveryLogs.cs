@@ -42,7 +42,7 @@ namespace Administrator
                 try
                 {
                     conn.Open();
-                    string query = "SELECT * FROM Inventory_Stock";
+                    string query = "SELECT * FROM DeliveryLogs";
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
                     {
                         DataTable dt = new DataTable();

@@ -34,12 +34,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pbProductImage = new Guna.UI2.WinForms.Guna2PictureBox();
             btn50g = new Guna.UI2.WinForms.Guna2Button();
             btn100g = new Guna.UI2.WinForms.Guna2Button();
             lblProductName = new Label();
             lblPrice50g = new Label();
             lblPrice100g = new Label();
+            btnADDtoCART = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pbProductImage).BeginInit();
             SuspendLayout();
             // 
@@ -67,14 +70,14 @@
             btn50g.FillColor = Color.LightGray;
             btn50g.Font = new Font("Segoe UI", 9F);
             btn50g.ForeColor = Color.Black;
-            btn50g.Location = new Point(15, 224);
+            btn50g.Location = new Point(15, 200);
             btn50g.Margin = new Padding(3, 2, 3, 2);
             btn50g.Name = "btn50g";
             btn50g.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn50g.Size = new Size(103, 28);
             btn50g.TabIndex = 1;
             btn50g.Text = "50g";
-            btn50g.Click += btn50g_Click;
+
             // 
             // btn100g
             // 
@@ -87,14 +90,13 @@
             btn100g.FillColor = Color.LightGray;
             btn100g.Font = new Font("Segoe UI", 9F);
             btn100g.ForeColor = Color.Black;
-            btn100g.Location = new Point(132, 224);
+            btn100g.Location = new Point(125, 200);
             btn100g.Margin = new Padding(3, 2, 3, 2);
             btn100g.Name = "btn100g";
             btn100g.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btn100g.Size = new Size(103, 28);
             btn100g.TabIndex = 2;
             btn100g.Text = "100g";
-            btn100g.Click += btn100g_Click;
             // 
             // lblProductName
             // 
@@ -108,7 +110,7 @@
             // lblPrice50g
             // 
             lblPrice50g.AutoSize = true;
-            lblPrice50g.Location = new Point(45, 254);
+            lblPrice50g.Location = new Point(46, 241);
             lblPrice50g.Name = "lblPrice50g";
             lblPrice50g.Size = new Size(38, 15);
             lblPrice50g.TabIndex = 4;
@@ -117,16 +119,34 @@
             // lblPrice100g
             // 
             lblPrice100g.AutoSize = true;
-            lblPrice100g.Location = new Point(169, 254);
+            lblPrice100g.Location = new Point(157, 241);
             lblPrice100g.Name = "lblPrice100g";
             lblPrice100g.Size = new Size(38, 15);
             lblPrice100g.TabIndex = 5;
             lblPrice100g.Text = "label3";
             // 
+            // btnADDtoCART
+            // 
+            btnADDtoCART.CustomizableEdges = customizableEdges7;
+            btnADDtoCART.DisabledState.BorderColor = Color.DarkGray;
+            btnADDtoCART.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnADDtoCART.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnADDtoCART.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnADDtoCART.FillColor = Color.Black;
+            btnADDtoCART.Font = new Font("Segoe UI", 9F);
+            btnADDtoCART.ForeColor = Color.White;
+            btnADDtoCART.Location = new Point(80, 266);
+            btnADDtoCART.Name = "btnADDtoCART";
+            btnADDtoCART.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnADDtoCART.Size = new Size(74, 26);
+            btnADDtoCART.TabIndex = 6;
+            btnADDtoCART.Text = "CART";
+            // 
             // UC_Product
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnADDtoCART);
             Controls.Add(lblPrice100g);
             Controls.Add(lblPrice50g);
             Controls.Add(lblProductName);
@@ -135,8 +155,7 @@
             Controls.Add(pbProductImage);
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Product";
-            Size = new Size(246, 290);
-            Load += UC_Product_Load;
+            Size = new Size(246, 301);
             ((System.ComponentModel.ISupportInitialize)pbProductImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -150,5 +169,6 @@
         private Label lblProductName;
         private Label lblPrice50g;
         private Label lblPrice100g;
+        private Guna.UI2.WinForms.Guna2Button btnADDtoCART;
     }
 }

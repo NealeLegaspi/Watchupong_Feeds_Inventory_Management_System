@@ -15,39 +15,44 @@ namespace Administrator
         public UC_Product_Cashier()
         {
             InitializeComponent();
+
+            // Subscribe to the ProductAdded event
+            frmAddProduct.ProductAdded += OnProductAdded;
         }
 
-        private void ProductPanel_Paint(object sender, PaintEventArgs e)
+        private void OnProductAdded(object sender, frmAddProduct.ProductEventArgs e)
         {
+            // Create a new UC_Product instance and set its properties
+            UC_Product ucProduct = new UC_Product
+            {
+                ProductName = e.ProductName,
+                Price50g = e.Price50g,
+                Price100g = e.Price100g
+            };
 
+            // Add to flowLayoutPanel
+            flowLayoutPanel1.Invoke((MethodInvoker)delegate
+            {
+                flowLayoutPanel1.Controls.Add(ucProduct);
+            });
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            // Handle painting logic, if needed
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+            // Handle painting logic, if needed
         }
 
         private void UC_Product_Cashier_Load(object sender, EventArgs e)
         {
-            WatchupongConnections.Instance.Open();
-            var reader = WatchupongConnections.Instance.ExecuteReader
-            ("Select ProductName, ProductImage, Price From Inventory_ProductList");
 
-            while (reader.Read())
-            {
-                UC_Product ucP = new UC_Product();
-                ucP.GetProductName = Convert.ToString(reader["ProductName"]);
-                ucP.GetProductImage = (byte[])reader["ProductImage"];
-                ucP.GetPrice50g = Convert.ToDecimal(reader["Price50g"]);
-                ucP.GetPrice100g = Convert.ToDecimal(reader["Price100g"]);
-                UC_Product.P50g += selectedClick;
-                UC_Product.P100g += selectedClick;
-            }
-        }
-
-        public void selectedClick(object sender, EventArgs e)
-        {
-            UC_Product ucP = (UC_Product)sender;
-            UC_ProductAddDeduc ucAD = new UC_ProductAddDeduc();
-            ucAD.GetProductName = ucP.GetProductName;
-            ucAD.GetPrice50g = ucP.GetPrice50g;
-            ucAD.GetPrice100g = ucP.GetPrice100g;
-            PanelListOfProduct.Controls.Add(ucAD); 
         }
     }
 }
+
+
+

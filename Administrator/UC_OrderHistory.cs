@@ -13,37 +13,28 @@ namespace Administrator
 {
     public partial class UC_OrderHistory : UserControl
     {
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\source\repos\Watchupong_Feeds_Inventory_Management_System\Administrator\WatchupongFeedsDB.mdf;Integrated Security=True";
+        
         public UC_OrderHistory()
         {
             InitializeComponent();
-            LoadData();
+            
         }
+        static OrderHistoryQuery orderhistory = new OrderHistoryQuery();
 
         private void dtgOrderHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-        private void LoadData()
+        
+        private void UC_OrderHistory_Load(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT Customer_ID, ProductName, Payment, DateTime, Total FROM OrderHistory";
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        dtgOrderHistory.DataSource = dt;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading data: " + ex.Message);
-                }
-            }
+            RefreshOrderHistory();
+        }
+
+        public void RefreshOrderHistory()
+        {
+            orderhistory.DisplayList();
+            dtgOrderHistory.DataSource = orderhistory.bindingSource;
         }
     }
 }
