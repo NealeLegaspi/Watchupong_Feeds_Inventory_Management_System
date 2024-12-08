@@ -301,8 +301,9 @@
             // 
             // guna2Panel2
             // 
-            guna2Panel2.Controls.Add(pictureBox2);
+            guna2Panel2.BackColor = Color.Black;
             guna2Panel2.Controls.Add(pictureBox3);
+            guna2Panel2.Controls.Add(pictureBox2);
             guna2Panel2.CustomizableEdges = customizableEdges19;
             guna2Panel2.Dock = DockStyle.Top;
             guna2Panel2.Location = new Point(208, 0);
@@ -324,10 +325,10 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(79, 8);
+            pictureBox3.Location = new Point(88, 15);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(587, 50);
-            pictureBox3.TabIndex = 1;
+            pictureBox3.Size = new Size(329, 36);
+            pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             // 
             // Home_Dashboard

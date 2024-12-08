@@ -106,7 +106,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, -7);
+            pictureBox1.Location = new Point(0, -3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(73, 68);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -117,7 +117,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(79, 12);
+            pictureBox3.Location = new Point(79, 16);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(329, 36);
             pictureBox3.TabIndex = 1;
@@ -250,7 +250,7 @@
             btnHistoryCashier.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnHistoryCashier.Size = new Size(201, 42);
             btnHistoryCashier.TabIndex = 2;
-            btnHistoryCashier.Text = "Order History";
+            btnHistoryCashier.Text = "  Order ";
             btnHistoryCashier.TextAlign = HorizontalAlignment.Left;
             btnHistoryCashier.Click += btnHistoryCashier_Click;
             // 
