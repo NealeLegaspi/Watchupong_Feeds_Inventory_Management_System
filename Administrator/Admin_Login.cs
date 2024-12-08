@@ -28,5 +28,9 @@ namespace Administrator
             this.Hide();
         }
 
+        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace Administrator
                 {
                         sqlConnect.Open();
 
-                        using (SqlCommand sqlCommand = new SqlCommand("SELECT Username, Password FROM Admin_Account WHERE Username = @user AND Password = @password", sqlConnect))
+                        using (SqlCommand sqlCommand = new SqlCommand("SELECT Username, Password FROM Account WHERE Username = @user AND Password = @password", sqlConnect))
                         {
                             sqlCommand.Parameters.AddWithValue("@user", user);
                             sqlCommand.Parameters.AddWithValue("@password", password);

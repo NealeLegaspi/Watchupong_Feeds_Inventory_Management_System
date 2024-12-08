@@ -29,11 +29,7 @@ namespace Administrator
 
         public void DisplayList()
         {
-            string ViewClubMembers = "SELECT * FROM OrderHistory";
-            sqlAdapter = new SqlDataAdapter(ViewClubMembers, connectionString);
-            dataTable.Clear();
-            sqlAdapter.Fill(dataTable);
-            bindingSource.DataSource = dataTable;
+            
         }
     }
 }

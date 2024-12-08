@@ -23,22 +23,13 @@ namespace Administrator
         {
             SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True");
             WatchupongConnections.Instance.Open();
-           SqlCommand sqlconn = new SqlCommand("INSERT INTO CashierAccount(Name, Username, Password, Email, Gender, Status ) values (@nm,@user,@pass,@email,@gender,@status)",conn);
+           SqlCommand sqlconn = new SqlCommand("INSERT INTO Account(Username, Password, Role, Status ) values (@user,@pass,@role,@status)",conn);
 
             
             sqlconn.Parameters.AddWithValue("@user", txtuser.Text);
-            sqlconn.Parameters.AddWithValue("@nm", $"{txtfirst.Text} {txtlast.Text}");
-            sqlconn.Parameters.AddWithValue("@email", txtemail.Text);
             sqlconn.Parameters.AddWithValue("@pass", txtpass.Text);
+            sqlconn.Parameters.AddWithValue("@role", guna2ComboBox1.Text);
             sqlconn.Parameters.AddWithValue("@status", "Active");
-            if (rbMale.Checked)
-            {
-                sqlconn.Parameters.AddWithValue("@gender", "Male");
-            }
-            else
-            {
-                sqlconn.Parameters.AddWithValue("@gender", "Female");
-            }
 
             conn.Open();
             sqlconn.ExecuteNonQuery();

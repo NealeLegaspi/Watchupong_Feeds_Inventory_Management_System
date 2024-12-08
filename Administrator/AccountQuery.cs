@@ -30,7 +30,7 @@ namespace Administrator
 
         public void DisplayList()
         {
-            string ViewClubMembers = "SELECT * FROM Cashier_Account";
+            string ViewClubMembers = "SELECT * FROM Account";
             sqlAdapter = new SqlDataAdapter(ViewClubMembers, connectionString);
             dataTable.Clear();
             sqlAdapter.Fill(dataTable);

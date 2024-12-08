@@ -84,12 +84,13 @@
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Location = new Point(833, 502);
             guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
+            guna2TextBox1.PasswordChar = '●';
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2TextBox1.Size = new Size(420, 30);
             guna2TextBox1.TabIndex = 2;
+            guna2TextBox1.UseSystemPasswordChar = true;
             // 
             // guna2HtmlLabel1
             // 
@@ -101,7 +102,8 @@
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(91, 27);
             guna2HtmlLabel1.TabIndex = 3;
-            guna2HtmlLabel1.Text = "Username:";            // 
+            guna2HtmlLabel1.Text = "Username:";
+            // 
             // guna2TextBox2
             // 
             guna2TextBox2.BorderRadius = 10;
@@ -162,6 +164,7 @@
             cmbRole.Name = "cmbRole";
             cmbRole.Size = new Size(112, 23);
             cmbRole.TabIndex = 7;
+            cmbRole.SelectedIndexChanged += cmbRole_SelectedIndexChanged;
             // 
             // guna2HtmlLabel3
             // 
