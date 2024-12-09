@@ -45,7 +45,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1144, 559);
             Controls.Add(flowLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Cashier_Cash_Receipt";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cashier_Cash_Receipt";
             ResumeLayout(false);
         }

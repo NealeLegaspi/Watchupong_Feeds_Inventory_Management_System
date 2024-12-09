@@ -14,7 +14,7 @@ namespace Administrator
 {
     public partial class UC_DeliveryLogs : UserControl
     {
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\legas\source\repos\Watchupong_Feeds_Inventory_Management_System\Administrator\WatchupongFeedsDB.mdf;Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\source\repos\Watchupong_Feeds_Inventory_Management_System\Administrator\WatchupongFeedsDB.mdf;Integrated Security=True";
 
         public UC_DeliveryLogs()
         {
@@ -28,7 +28,7 @@ namespace Administrator
 
         private void txtDLSearchBar_TextChanged(object sender, EventArgs e)
         {
-
+            SearchData(txtSearchBar.Text);
         }
 
         private void dtgDeliveryLogs_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -42,7 +42,7 @@ namespace Administrator
                 try
                 {
                     conn.Open();
-                    string query = "SELECT * FROM DeliveryLogs";
+                    string query = "SELECT delivery_id , product_id AS product_name , quantity, mfg_date, exp_date ,delivery_date FROM DeliveryLogs";
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
                     {
                         DataTable dt = new DataTable();
@@ -95,6 +95,11 @@ namespace Administrator
         private void btnArchived_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Archived functionality is not implemented yet.");
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

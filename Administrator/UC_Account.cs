@@ -72,7 +72,7 @@ namespace Administrator
                     {
                         // Perform the deletion in the database
                         WatchupongConnections.Instance.Open();
-                        var query = "UPDATE Account SET archive = 1 WHERE user_id = @user_id";
+                        var query = "UPDATE Account SET archived = 1 WHERE user_id = @user_id";
                         var command = WatchupongConnections.Instance.CreateCommand(query);
                         command.Parameters.AddWithValue("@user_id", selectedAccountId);
                         int rowsAffected = command.ExecuteNonQuery();

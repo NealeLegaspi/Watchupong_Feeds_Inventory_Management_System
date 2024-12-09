@@ -1,8 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
 
-using Microsoft.Data.SqlClient;
-using System;
 
 namespace Administrator
 {
@@ -13,8 +11,9 @@ namespace Administrator
 
         private SqlConnection _sqlcon;
         private SqlCommand _sqlcom;
+       
 
-        public readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\legas\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
+        public readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True";
 
         private WatchupongConnections()
         {
@@ -41,7 +40,7 @@ namespace Administrator
             get { return _connectionString; }
         }
 
-        // Method to open the SQL connection
+       
         public void Open()
         {
             if (_sqlcon.State == System.Data.ConnectionState.Closed)
@@ -66,28 +65,28 @@ namespace Administrator
 
         public SqlDataReader ExecuteReader(string query)
         {
-            Open(); 
-            _sqlcom = new SqlCommand(query, _sqlcon);
-
-     
-            
-                return _sqlcom.ExecuteReader();
-            
-
-        }
-
-        public int ExecuteNonQuery(string query)
-        {
             Open();
             _sqlcom = new SqlCommand(query, _sqlcon);
 
+
+
+            return _sqlcom.ExecuteReader();
+
+
+        }
+        public SqlDataAdapter ExecuteAdapter(string query)
+        {
+            Open(); 
+            _sqlcom = new SqlCommand(query, _sqlcon);
             try
             {
-                return _sqlcom.ExecuteNonQuery();
+                // Execute the query and return the SqlDataReader
+                return new SqlDataAdapter(_sqlcom);
             }
-            catch (Exception ex)
+            finally
             {
-                throw new Exception($"Error executing non-query: {ex.Message}", ex);
+                // Close the command regardless of exceptions (recommended practice)
+                _sqlcom.Dispose();
             }
         }
     }

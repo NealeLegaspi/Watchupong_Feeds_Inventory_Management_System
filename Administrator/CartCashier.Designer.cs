@@ -174,6 +174,7 @@
             txtProductName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtProductName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtProductName.Font = new Font("Segoe UI", 9F);
+            txtProductName.ForeColor = Color.Black;
             txtProductName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtProductName.Location = new Point(5, 54);
             txtProductName.Name = "txtProductName";
@@ -295,6 +296,7 @@
             guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
+            guna2TextBox1.ForeColor = Color.Black;
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Location = new Point(5, 109);
             guna2TextBox1.Name = "guna2TextBox1";

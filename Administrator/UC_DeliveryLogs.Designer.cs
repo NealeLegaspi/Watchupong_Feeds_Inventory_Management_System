@@ -33,11 +33,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dtgDeliveryLogs = new DataGridView();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             btnArchived = new Guna.UI2.WinForms.Guna2Button();
             btnSearch = new Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dtgDeliveryLogs).BeginInit();
             SuspendLayout();
             // 
@@ -101,7 +104,7 @@
             btnArchived.FillColor = Color.LightGray;
             btnArchived.Font = new Font("Segoe UI", 9F);
             btnArchived.ForeColor = Color.Black;
-            btnArchived.Location = new Point(1037, 547);
+            btnArchived.Location = new Point(17, 552);
             btnArchived.Name = "btnArchived";
             btnArchived.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnArchived.Size = new Size(116, 32);
@@ -110,17 +113,38 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(1078, 29);
+            btnSearch.Location = new Point(1078, 561);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 10;
-            btnSearch.Text = "Search";
+            btnSearch.Text = "Add";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click_1;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 10;
+            guna2Button1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            guna2Button1.CustomizableEdges = customizableEdges5;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.LightGray;
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.Black;
+            guna2Button1.Location = new Point(956, 561);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Button1.Size = new Size(116, 32);
+            guna2Button1.TabIndex = 11;
+            guna2Button1.Text = "Add";
             // 
             // UC_DeliveryLogs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(guna2Button1);
             Controls.Add(btnSearch);
             Controls.Add(btnArchived);
             Controls.Add(txtSearchBar);
@@ -142,5 +166,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearchBar;
         private Guna.UI2.WinForms.Guna2Button btnArchived;
         private Button btnSearch;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

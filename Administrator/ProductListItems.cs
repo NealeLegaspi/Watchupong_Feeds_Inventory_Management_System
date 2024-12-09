@@ -89,6 +89,10 @@ namespace Administrator
         {
             price.Add(Pprice);
         }
+        public void ClearPrice()
+        {
+            price.Clear();
+        }
     
 
 

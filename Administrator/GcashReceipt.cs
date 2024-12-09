@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Administrator
 {
-    public partial class UC_InventoryProductListTry : UserControl
+    public partial class GcashReceipt : Form
     {
-        public UC_InventoryProductListTry()
+        public GcashReceipt()
         {
             InitializeComponent();
+        }
+
+        private void btnReceipt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

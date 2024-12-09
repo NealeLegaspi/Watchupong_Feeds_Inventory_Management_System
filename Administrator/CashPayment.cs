@@ -26,6 +26,7 @@ namespace Administrator
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             WatchupongConnections.Instance.Open();
+            CashReceipt cash = new CashReceipt();
             if (Convert.ToDecimal(txtAmount.Text) == totalamoubt)
             {
                 var query = WatchupongConnections.Instance.CreateCommand
@@ -41,7 +42,7 @@ namespace Administrator
                 query.Parameters.AddWithValue("@date", DateTime.Now.ToString("MM/dd/yyyy"));
                 query.ExecuteNonQuery();
                 InsertProductId();
-
+                cash.ShowDialog();
             }
             else if(Convert.ToDecimal(txtAmount.Text) > totalamoubt)
             {
@@ -60,6 +61,8 @@ namespace Administrator
                 query.Parameters.AddWithValue("@date", DateTime.Now.ToString("MM/dd/yyyy"));
                 query.ExecuteNonQuery();
                 InsertProductId();
+                cash.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -77,9 +80,9 @@ namespace Administrator
                     "   BEGIN TRANSACTION \n" +
                     "       DECLARE @id AS INT \n" +
                     "       DECLARE @oid AS INT \n" +
-                    "       SET @oid = (SELECT COUNT(order_id) FROM Order) + 1 \n" +
+                   $"       SET @oid = (SELECT COUNT(order_id) FROM [Order]) + {1} \n" +
                     "       SET @id = (SELECT TOP 1 payment_id FROM Payment ORDER BY payment_id DESC)\n" +
-                    "       INSERT INTO Order VALUES(@oid, @id, @pid, @quan, (@quan * @price)) \n" +
+                    "       INSERT INTO [Order] VALUES(@oid, @id, @pid, @quan, (@quan * @price)) \n" +
                     "       UPDATE ProductList SET quantity = quantity - @quan WHERE product_id = @pid \n" +
                     "   COMMIT \n" +
                     "END");

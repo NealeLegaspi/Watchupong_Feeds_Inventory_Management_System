@@ -68,6 +68,7 @@
             txtAmount.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtAmount.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtAmount.Font = new Font("Segoe UI", 9F);
+            txtAmount.ForeColor = Color.Black;
             txtAmount.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtAmount.Location = new Point(33, 271);
             txtAmount.Name = "txtAmount";
@@ -128,6 +129,7 @@
             Controls.Add(label1);
             Controls.Add(txtAmount);
             Controls.Add(guna2Button1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "CashPayment";
             Text = "CashPayment";
             ResumeLayout(false);

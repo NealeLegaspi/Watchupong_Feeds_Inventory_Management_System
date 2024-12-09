@@ -34,7 +34,16 @@ namespace Administrator
             {
                 conn.Open();
 
-                string query = "SELECT order_id, payment_id, product_id, quantity, total_price FROM [Order]";
+                string query = "SELECT " +
+                    "order_id, " +
+                    "PL.product_name, " +
+                    "P.payment_method , " +
+                    "O.quantity, " +
+                    "O.total_price, " +
+                    "P.date_time AS 'Delivery Date'" +
+                    "FROM [Order] AS O\n" +
+                    "INNER JOIN Payment AS P ON P.payment_id = O.payment_id \n" +
+                    "INNER JOIN ProductList AS PL ON PL.product_id = O.product_id";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 SqlDataReader reader = cmd.ExecuteReader();

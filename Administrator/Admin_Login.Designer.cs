@@ -80,9 +80,11 @@
             txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.Font = new Font("Segoe UI", 9F);
+            txtPassword.ForeColor = Color.Black;
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.Location = new Point(832, 467);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '●';
             txtPassword.PlaceholderText = "";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -113,6 +115,7 @@
             txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsername.Font = new Font("Segoe UI", 9F);
+            txtUsername.ForeColor = Color.Black;
             txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsername.Location = new Point(832, 399);
             txtUsername.Name = "txtUsername";

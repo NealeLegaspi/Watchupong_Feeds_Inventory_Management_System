@@ -295,7 +295,9 @@
             Controls.Add(txtNewPassword);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(txtName);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmUpdateUser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Edit User Account";
             ResumeLayout(false);
             PerformLayout();

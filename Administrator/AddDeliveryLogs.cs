@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace Administrator
 {
-    public partial class UC_ActivityLogs : UserControl
+    public partial class AddDeliveryLogs : Form
     {
-        public UC_ActivityLogs()
+        public AddDeliveryLogs()
         {
             InitializeComponent();
         }
 
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtgActivityLogs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }
     }
 }
-

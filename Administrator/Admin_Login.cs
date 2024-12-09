@@ -32,7 +32,7 @@ namespace Administrator
                     conn.Open();
 
                     // Query to fetch the user's role
-                    string query = "SELECT role FROM Account WHERE username = @username AND password = @password";
+                    string query = "SELECT role, user_id FROM Account WHERE username = @username AND password = @password";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
@@ -46,6 +46,7 @@ namespace Administrator
                         // Redirect to the appropriate dashboard
                         if (role == "Admin")
                         {
+
                             Home_Dashboard adminDashboard = new Home_Dashboard();
                             adminDashboard.Show();
                         }

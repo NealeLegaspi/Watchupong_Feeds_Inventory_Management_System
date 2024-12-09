@@ -79,6 +79,12 @@ namespace Administrator
         {
 
         }
+        private int id;
+        public int getId
+        {
+            get { return id; }
+            set { id = value; }
+        }
     }
 }
 

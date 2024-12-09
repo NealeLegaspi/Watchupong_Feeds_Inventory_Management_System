@@ -146,6 +146,7 @@
             txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.Font = new Font("Segoe UI", 9F);
+            txtPassword.ForeColor = Color.Black;
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.Location = new Point(28, 226);
             txtPassword.Name = "txtPassword";
@@ -177,6 +178,7 @@
             txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsername.Font = new Font("Segoe UI", 9F);
+            txtUsername.ForeColor = Color.Black;
             txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsername.Location = new Point(29, 145);
             txtUsername.Name = "txtUsername";
@@ -207,6 +209,7 @@
             txtName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtName.Font = new Font("Segoe UI", 9F);
+            txtName.ForeColor = Color.Black;
             txtName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtName.Location = new Point(28, 80);
             txtName.Name = "txtName";
@@ -236,7 +239,7 @@
             cmbRole.FocusedColor = Color.FromArgb(94, 148, 255);
             cmbRole.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             cmbRole.Font = new Font("Segoe UI", 10F);
-            cmbRole.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbRole.ForeColor = Color.Black;
             cmbRole.ItemHeight = 30;
             cmbRole.Items.AddRange(new object[] { "Cashier\t", "Admin" });
             cmbRole.Location = new Point(29, 389);
@@ -256,6 +259,7 @@
             txtReEnterPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtReEnterPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtReEnterPassword.Font = new Font("Segoe UI", 9F);
+            txtReEnterPassword.ForeColor = Color.Black;
             txtReEnterPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtReEnterPassword.Location = new Point(29, 307);
             txtReEnterPassword.Name = "txtReEnterPassword";
@@ -315,7 +319,9 @@
             Controls.Add(txtUsername);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(txtName);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "createuser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "createuser";
             ResumeLayout(false);
             PerformLayout();
