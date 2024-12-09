@@ -17,6 +17,9 @@ namespace Administrator
             InitializeComponent();
         }
 
-        
+        private void btnCash_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

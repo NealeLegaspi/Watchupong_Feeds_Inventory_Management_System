@@ -115,6 +115,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 18.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(18, 16);
             label1.Name = "label1";
             label1.Size = new Size(153, 31);
@@ -152,7 +153,7 @@
             guna2Button1.FillColor = Color.LightGray;
             guna2Button1.Font = new Font("Segoe UI", 9F);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(1036, 553);
+            guna2Button1.Location = new Point(18, 553);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Button1.Size = new Size(116, 32);
@@ -169,6 +170,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(1134, 444);
             dataGridView1.TabIndex = 11;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // UC_InventoryStocks
             // 

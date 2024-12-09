@@ -28,10 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             flowLayoutPanel1 = new FlowLayoutPanel();
             flowLayoutPanel2 = new FlowLayoutPanel();
             label1 = new Label();
             label2 = new Label();
+            btnGcash = new Guna.UI2.WinForms.Guna2Button();
+            btnCash = new Guna.UI2.WinForms.Guna2Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            Amount = new Label();
+            label3 = new Label();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -47,8 +57,9 @@
             // 
             flowLayoutPanel2.BackColor = SystemColors.ControlDark;
             flowLayoutPanel2.Location = new Point(774, 37);
+            flowLayoutPanel2.Margin = new Padding(3, 3, 3, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(383, 561);
+            flowLayoutPanel2.Size = new Size(383, 349);
             flowLayoutPanel2.TabIndex = 1;
             // 
             // label1
@@ -71,10 +82,84 @@
             label2.TabIndex = 3;
             label2.Text = "CART";
             // 
+            // btnGcash
+            // 
+            btnGcash.CustomizableEdges = customizableEdges1;
+            btnGcash.DisabledState.BorderColor = Color.DarkGray;
+            btnGcash.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnGcash.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnGcash.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnGcash.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGcash.ForeColor = Color.White;
+            btnGcash.Location = new Point(911, 508);
+            btnGcash.Name = "btnGcash";
+            btnGcash.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnGcash.Size = new Size(147, 47);
+            btnGcash.TabIndex = 26;
+            btnGcash.Text = "G-CASH";
+            btnGcash.Click += btnGcash_Click;
+            // 
+            // btnCash
+            // 
+            btnCash.CustomizableEdges = customizableEdges3;
+            btnCash.DisabledState.BorderColor = Color.DarkGray;
+            btnCash.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCash.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCash.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCash.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCash.ForeColor = Color.White;
+            btnCash.Location = new Point(911, 455);
+            btnCash.Name = "btnCash";
+            btnCash.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnCash.Size = new Size(147, 47);
+            btnCash.TabIndex = 25;
+            btnCash.Text = "CASH";
+            btnCash.Click += btnCash_Click;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(Amount, 1, 0);
+            tableLayoutPanel1.Controls.Add(label3, 0, 0);
+            tableLayoutPanel1.Location = new Point(775, 389);
+            tableLayoutPanel1.Margin = new Padding(0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(383, 39);
+            tableLayoutPanel1.TabIndex = 27;
+            // 
+            // Amount
+            // 
+            Amount.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            Amount.AutoSize = true;
+            Amount.Location = new Point(194, 12);
+            Amount.Name = "Amount";
+            Amount.Size = new Size(186, 15);
+            Amount.TabIndex = 1;
+            Amount.Text = "-Total Amount-";
+            Amount.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Location = new Point(3, 12);
+            label3.Name = "label3";
+            label3.Size = new Size(185, 15);
+            label3.TabIndex = 0;
+            label3.Text = "Total Amount:";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // UC_Product_Cashier
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(btnGcash);
+            Controls.Add(btnCash);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(flowLayoutPanel2);
@@ -82,6 +167,8 @@
             Name = "UC_Product_Cashier";
             Size = new Size(1160, 598);
             Load += UC_Product_Cashier_Load_1;
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -92,5 +179,10 @@
         private FlowLayoutPanel flowLayoutPanel2;
         private Label label1;
         private Label label2;
+        private Guna.UI2.WinForms.Guna2Button btnGcash;
+        private Guna.UI2.WinForms.Guna2Button btnCash;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label Amount;
+        private Label label3;
     }
 }

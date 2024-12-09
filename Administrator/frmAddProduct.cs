@@ -21,18 +21,13 @@ namespace Administrator
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtproductname.Text) ||
-                string.IsNullOrWhiteSpace(txtGrams.Text) ||
-                string.IsNullOrWhiteSpace(txtPrice.Text) ||
-                string.IsNullOrWhiteSpace(txtQuantity.Text))
+            if (string.IsNullOrWhiteSpace(txtproductname.Text) &&
+                string.IsNullOrWhiteSpace(txtPrice.Text) &&
+                string.IsNullOrWhiteSpace(txtQuantity.Text) &&
+                imagebytes != null)
+
             {
                 MessageBox.Show("Please fill in all required fields.");
-                return;
-            }
-
-            if (!int.TryParse(txtGrams.Text, out int grams))
-            {
-                MessageBox.Show("Grams must be a valid integer.");
                 return;
             }
 
@@ -48,62 +43,96 @@ namespace Administrator
                 return;
             }
 
-            DateTime manufacturingDate = dtpManufacturingDate.Value.Date;
-            DateTime expirationDate = dtpExpirationDate.Value.Date;
+            var sqlcomm = WatchupongConnections.Instance.CreateCommand(
+                "INSERT INTO ProductList (product_name, quantity, price, product_image, description) " +
+                "VALUES (@product_name, @quantity, @price, @product_image, @description)");
 
-            SqlCommand sqlcomm = new SqlCommand(
-                "INSERT INTO ProductList (ProductName, Grams, Price, StockStatus, DeliveryDate, Description, Quantity, MfgDate, ExpDate) " +
-                "VALUES (@ProductName, @Grams, @Price, @StockStatus, @DeliveryDate, @Description, @Quantity, @ManufacturingDate, @ExpirationDate)", conn);
+            sqlcomm.Parameters.AddWithValue("@product_name", txtproductname.Text);
+            sqlcomm.Parameters.AddWithValue("@quantity", Convert.ToInt32(txtQuantity.Text));
+            sqlcomm.Parameters.AddWithValue("@price", Convert.ToDecimal(txtPrice.Text));
+            sqlcomm.Parameters.AddWithValue("@product_image", imagebytes);
+            sqlcomm.Parameters.AddWithValue("@description", rtbDescription.Text);
 
-            sqlcomm.Parameters.AddWithValue("@ProductName", txtproductname.Text);
-            sqlcomm.Parameters.AddWithValue("@Grams", grams);
-            sqlcomm.Parameters.AddWithValue("@Price", price);
-            sqlcomm.Parameters.AddWithValue("@ManufacturingDate", manufacturingDate);
-            sqlcomm.Parameters.AddWithValue("@ExpirationDate", expirationDate);
-            sqlcomm.Parameters.AddWithValue("@DeliveryDate", DateTime.Now);
-            sqlcomm.Parameters.AddWithValue("@Description", rtbDescription.Text);
-            sqlcomm.Parameters.AddWithValue("@Quantity", quantity);
-            sqlcomm.Parameters.AddWithValue("@StockStatus", "Good");
+            sqlcomm.ExecuteNonQuery();
 
-            try
-            {
-                conn.Open();
-                int rowsAffected = sqlcomm.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Product added successfully.");
-
-                    // Raise the ProductAdded event
-                    ProductAdded?.Invoke(this, new ProductEventArgs
-                    {
-                        ProductName = txtproductname.Text,
-                        Price50g = price / 2,   // Assume 50g is half the price
-                        Price100g = price      // Assume 100g is the full price
-                    });
-                }
-                else
-                {
-                    MessageBox.Show("Failed to add the product.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}");
-            }
-            finally
-            {
-                conn.Close();
-            }
+         
+            txtPrice.Clear();
+            txtproductname.Clear();
+            txtQuantity.Clear();
+            pbProductImage.Image = null;
+            MessageBox.Show("Product Succesfully Added!");
         }
 
-        // Define the ProductEventArgs class
+
+        private Image productImage;
+        private byte[] imagebytes;
+        private void AddRawMaterial_picturebox_Click(object sender, EventArgs e)
+        {
+            pbProductImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            OpenFileDialog ofd = new OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.bmp"
+            };
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = ofd.FileName;
+                productImage = Image.FromFile(imagePath);
+                pbProductImage.Image = productImage;
+                if (productImage != null)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        productImage.Save(ms, productImage.RawFormat);
+                        imagebytes = ms.ToArray();
+                    }
+                }
+            }
+
+        }
+
+
         public class ProductEventArgs : EventArgs
         {
-            public string ProductName { get; set; }
-            public decimal Price50g { get; set; }
-            public decimal Price100g { get; set; }
+            
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            pbProductImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            OpenFileDialog ofd = new OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.bmp"
+            };
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = ofd.FileName;
+                productImage = Image.FromFile(imagePath);
+                pbProductImage.Image = productImage;
+                if (productImage != null)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        productImage.Save(ms, productImage.RawFormat);
+                        imagebytes = ms.ToArray();
+                    }
+                }
+            }
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            frmAddProduct addProduct = new frmAddProduct();
+            this.Close();
         }
     }
 }
+
 

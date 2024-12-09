@@ -39,7 +39,7 @@ namespace Administrator
 
         private void btnActivityLogs_Click(object sender, EventArgs e)
         {
-            UC_ActivityLogs ucAL = new UC_ActivityLogs();
+            UC_Audit ucAL = new UC_Audit();
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(ucAL);
 

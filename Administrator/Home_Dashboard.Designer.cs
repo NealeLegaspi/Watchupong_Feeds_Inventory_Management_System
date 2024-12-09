@@ -61,13 +61,13 @@
             btnHome = new Guna.UI2.WinForms.Guna2Button();
             MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
@@ -160,7 +160,7 @@
             btnDeliveryLogs.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnDeliveryLogs.Size = new Size(201, 42);
             btnDeliveryLogs.TabIndex = 5;
-            btnDeliveryLogs.Text = "Delivery Logs";
+            btnDeliveryLogs.Text = " Delivery Logs";
             btnDeliveryLogs.TextAlign = HorizontalAlignment.Left;
             btnDeliveryLogs.Click += btnDeliveryLogs_Click;
             // 
@@ -209,7 +209,7 @@
             btnOrderHistory.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnOrderHistory.Size = new Size(201, 42);
             btnOrderHistory.TabIndex = 3;
-            btnOrderHistory.Text = " Order History";
+            btnOrderHistory.Text = " Sales History";
             btnOrderHistory.TextAlign = HorizontalAlignment.Left;
             btnOrderHistory.Click += btnOrderHistory_Click;
             // 
@@ -234,7 +234,7 @@
             btnActivityLogs.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnActivityLogs.Size = new Size(201, 42);
             btnActivityLogs.TabIndex = 2;
-            btnActivityLogs.Text = "Activity Logs";
+            btnActivityLogs.Text = "  Audit";
             btnActivityLogs.TextAlign = HorizontalAlignment.Left;
             btnActivityLogs.Click += btnActivityLogs_Click;
             // 
@@ -312,6 +312,15 @@
             guna2Panel2.Size = new Size(1162, 61);
             guna2Panel2.TabIndex = 2;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(88, 15);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(329, 36);
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -321,15 +330,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(88, 15);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(329, 36);
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
             // 
             // Home_Dashboard
             // 
@@ -348,8 +348,8 @@
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 

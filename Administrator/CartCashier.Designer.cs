@@ -50,8 +50,8 @@
             btnDeduct = new Guna.UI2.WinForms.Guna2CircleButton();
             btnAdd = new Guna.UI2.WinForms.Guna2CircleButton();
             txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btnCash = new Guna.UI2.WinForms.Guna2Button();
+            btnGcash = new Guna.UI2.WinForms.Guna2Button();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
@@ -184,37 +184,38 @@
             txtProductName.Size = new Size(168, 37);
             txtProductName.TabIndex = 11;
             // 
-            // guna2Button1
+            // btnCash
             // 
-            guna2Button1.CustomizableEdges = customizableEdges5;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(122, 351);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(147, 47);
-            guna2Button1.TabIndex = 21;
-            guna2Button1.Text = "CASH";
+            btnCash.CustomizableEdges = customizableEdges5;
+            btnCash.DisabledState.BorderColor = Color.DarkGray;
+            btnCash.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCash.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCash.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCash.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCash.ForeColor = Color.White;
+            btnCash.Location = new Point(122, 351);
+            btnCash.Name = "btnCash";
+            btnCash.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnCash.Size = new Size(147, 47);
+            btnCash.TabIndex = 21;
+            btnCash.Text = "CASH";
+            btnCash.Click += btnCash_Click;
             // 
-            // guna2Button2
+            // btnGcash
             // 
-            guna2Button2.CustomizableEdges = customizableEdges7;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(122, 404);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(147, 47);
-            guna2Button2.TabIndex = 22;
-            guna2Button2.Text = "G-CASH";
+            btnGcash.CustomizableEdges = customizableEdges7;
+            btnGcash.DisabledState.BorderColor = Color.DarkGray;
+            btnGcash.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnGcash.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnGcash.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnGcash.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGcash.ForeColor = Color.White;
+            btnGcash.Location = new Point(122, 404);
+            btnGcash.Name = "btnGcash";
+            btnGcash.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnGcash.Size = new Size(147, 47);
+            btnGcash.TabIndex = 22;
+            btnGcash.Text = "G-CASH";
             // 
             // label8
             // 
@@ -315,8 +316,8 @@
             Controls.Add(guna2CircleButton1);
             Controls.Add(guna2CircleButton2);
             Controls.Add(guna2TextBox1);
-            Controls.Add(guna2Button2);
-            Controls.Add(guna2Button1);
+            Controls.Add(btnGcash);
+            Controls.Add(btnCash);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -345,8 +346,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnDeduct;
         private Guna.UI2.WinForms.Guna2CircleButton btnAdd;
         private Guna.UI2.WinForms.Guna2TextBox txtProductName;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnCash;
+        private Guna.UI2.WinForms.Guna2Button btnGcash;
         private Label label8;
         private Label label9;
         private Label label10;

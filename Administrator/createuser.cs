@@ -21,25 +21,51 @@ namespace Administrator
         public static EventHandler adduser;
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\source\\repos\\Watchupong_Feeds_Inventory_Management_System\\Administrator\\WatchupongFeedsDB.mdf;Integrated Security=True");
+            var query = WatchupongConnections.Instance.CreateCommand
+                ("INSERT INTO Account(name, username, password, role, archived) values (@name,@username,@password,@role, 0)");
+
+            query.Parameters.AddWithValue("@name", txtName.Text);
+            query.Parameters.AddWithValue("@username", txtUsername.Text);
+            query.Parameters.AddWithValue("@password", txtPassword.Text);
+            query.Parameters.AddWithValue("@role", cmbRole.Text);
+            cmbRole.Items.Add("Cashier");
+            cmbRole.Items.Add("Admin");
             WatchupongConnections.Instance.Open();
-           SqlCommand sqlconn = new SqlCommand("INSERT INTO Account(Username, Password, Role, Status ) values (@user,@pass,@role,@status)",conn);
-
-            
-            sqlconn.Parameters.AddWithValue("@user", txtuser.Text);
-            sqlconn.Parameters.AddWithValue("@pass", txtpass.Text);
-            sqlconn.Parameters.AddWithValue("@role", guna2ComboBox1.Text);
-            sqlconn.Parameters.AddWithValue("@status", "Active");
-
-            conn.Open();
-            sqlconn.ExecuteNonQuery();
-            conn.Close();
+            query.ExecuteNonQuery();
+            WatchupongConnections.Instance.Close();
 
             adduser?.Invoke(this, e);
-
-            UC_Account uC_Account = new UC_Account();
-            uC_Account.Show();
             this.Hide();
+        }
+
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void rbShowPassword1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbShowPassword1.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = !rbShowPassword1.Checked; // Show password
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = !rbShowPassword1.Checked; // Hide password
+            }
+        }
+
+        private void rbShowPassword2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbShowPassword2.Checked)
+            {
+                txtReEnterPassword.UseSystemPasswordChar = !rbShowPassword2.Checked; // Show password
+            }
+            else
+            {
+                txtReEnterPassword.UseSystemPasswordChar = !rbShowPassword2.Checked; // Hide password
+            }
         }
     }
 }
