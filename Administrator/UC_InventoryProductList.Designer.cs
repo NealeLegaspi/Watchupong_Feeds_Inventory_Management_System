@@ -145,11 +145,13 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridView1.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(13, 102);
+            dataGridView1.GridColor = SystemColors.ScrollBar;
+            dataGridView1.Location = new Point(13, 98);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(1134, 434);
             dataGridView1.TabIndex = 8;

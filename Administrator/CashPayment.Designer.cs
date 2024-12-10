@@ -129,8 +129,9 @@
             Controls.Add(label1);
             Controls.Add(txtAmount);
             Controls.Add(guna2Button1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "CashPayment";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CashPayment";
             ResumeLayout(false);
             PerformLayout();

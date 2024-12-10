@@ -49,7 +49,7 @@ namespace Administrator
             dataGridView.AlternatingRowsDefaultCellStyle.ForeColor = Color.Black;
 
             // Set the background color for default rows (optional)
-            dataGridView.DefaultCellStyle.BackColor = Color.White;
+            dataGridView.DefaultCellStyle.BackColor = Color.Black;
 
             // Set header style (optional)
             dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;

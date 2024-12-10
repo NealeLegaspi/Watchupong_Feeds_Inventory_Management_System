@@ -113,5 +113,13 @@ namespace Administrator
             LoadAccounts();
 
         }
+
+        private void dtgAccount_CellContentChange(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                    
+                
+            
+        }
     }
 }

@@ -16,7 +16,6 @@ namespace Administrator
             conn = new SqlConnection(WatchupongConnections.Instance._connectionString);
         }
 
-        // Define a custom event for product addition
         public static event EventHandler<ProductEventArgs> ProductAdded;
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
@@ -40,6 +39,11 @@ namespace Administrator
             if (!int.TryParse(txtQuantity.Text, out int quantity))
             {
                 MessageBox.Show("Quantity must be a valid integer.");
+                return;
+            }
+            if (imagebytes == null)
+            {
+                MessageBox.Show("Put a product image.");
                 return;
             }
 

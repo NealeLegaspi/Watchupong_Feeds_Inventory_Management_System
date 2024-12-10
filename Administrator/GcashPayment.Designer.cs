@@ -203,7 +203,7 @@
             Controls.Add(label1);
             Controls.Add(btnPay);
             Controls.Add(txtAmount);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "GcashPayment";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gcash";

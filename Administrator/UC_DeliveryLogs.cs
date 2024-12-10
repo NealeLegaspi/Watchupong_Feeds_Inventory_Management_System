@@ -63,7 +63,7 @@ namespace Administrator
                 try
                 {
                     conn.Open();
-                    string query = "SELECT * FROM Inventory WHERE ProductName LIKE @SearchTerm";
+                    string query = "SELECT * FROM Inventory WHERE product_name LIKE @SearchTerm";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
@@ -87,19 +87,19 @@ namespace Administrator
             LoadData();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            SearchData(txtSearchBar.Text);
-        }
+    
 
         private void btnArchived_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Archived functionality is not implemented yet.");
         }
 
-        private void btnSearch_Click_1(object sender, EventArgs e)
-        {
+  
 
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            AddDeliveryLogs addDeliveryLogs = new AddDeliveryLogs();
+            addDeliveryLogs.ShowDialog();
         }
     }
 }

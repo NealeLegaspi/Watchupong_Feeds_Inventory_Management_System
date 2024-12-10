@@ -45,12 +45,12 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            guna2DateTimePicker3 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            dtpMFGDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpEXPDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpDeliveryDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            cmbProductName = new Guna.UI2.WinForms.Guna2ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -98,102 +98,81 @@
             label5.TabIndex = 4;
             label5.Text = "Delivery Date";
             // 
-            // guna2DateTimePicker1
+            // dtpMFGDate
             // 
-            guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges1;
-            guna2DateTimePicker1.FillColor = Color.White;
-            guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
-            guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(24, 175);
-            guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2DateTimePicker1.Size = new Size(200, 21);
-            guna2DateTimePicker1.TabIndex = 5;
-            guna2DateTimePicker1.Value = new DateTime(2024, 12, 9, 22, 45, 16, 15);
+            dtpMFGDate.Checked = true;
+            dtpMFGDate.CustomizableEdges = customizableEdges1;
+            dtpMFGDate.FillColor = Color.White;
+            dtpMFGDate.Font = new Font("Segoe UI", 9F);
+            dtpMFGDate.Format = DateTimePickerFormat.Long;
+            dtpMFGDate.Location = new Point(24, 175);
+            dtpMFGDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpMFGDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpMFGDate.Name = "dtpMFGDate";
+            dtpMFGDate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            dtpMFGDate.Size = new Size(200, 21);
+            dtpMFGDate.TabIndex = 5;
+            dtpMFGDate.Value = new DateTime(2024, 12, 9, 22, 45, 16, 15);
             // 
-            // guna2DateTimePicker2
+            // dtpEXPDate
             // 
-            guna2DateTimePicker2.Checked = true;
-            guna2DateTimePicker2.CustomizableEdges = customizableEdges3;
-            guna2DateTimePicker2.FillColor = Color.White;
-            guna2DateTimePicker2.Font = new Font("Segoe UI", 9F);
-            guna2DateTimePicker2.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker2.Location = new Point(230, 175);
-            guna2DateTimePicker2.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker2.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2DateTimePicker2.Size = new Size(200, 21);
-            guna2DateTimePicker2.TabIndex = 6;
-            guna2DateTimePicker2.Value = new DateTime(2024, 12, 9, 22, 45, 16, 15);
+            dtpEXPDate.Checked = true;
+            dtpEXPDate.CustomizableEdges = customizableEdges3;
+            dtpEXPDate.FillColor = Color.White;
+            dtpEXPDate.Font = new Font("Segoe UI", 9F);
+            dtpEXPDate.Format = DateTimePickerFormat.Long;
+            dtpEXPDate.Location = new Point(230, 175);
+            dtpEXPDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpEXPDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpEXPDate.Name = "dtpEXPDate";
+            dtpEXPDate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dtpEXPDate.Size = new Size(200, 21);
+            dtpEXPDate.TabIndex = 6;
+            dtpEXPDate.Value = new DateTime(2024, 12, 9, 22, 45, 16, 15);
             // 
-            // guna2DateTimePicker3
+            // dtpDeliveryDate
             // 
-            guna2DateTimePicker3.Checked = true;
-            guna2DateTimePicker3.CustomizableEdges = customizableEdges5;
-            guna2DateTimePicker3.FillColor = Color.White;
-            guna2DateTimePicker3.Font = new Font("Segoe UI", 9F);
-            guna2DateTimePicker3.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker3.Location = new Point(24, 260);
-            guna2DateTimePicker3.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker3.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker3.Name = "guna2DateTimePicker3";
-            guna2DateTimePicker3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2DateTimePicker3.Size = new Size(200, 21);
-            guna2DateTimePicker3.TabIndex = 7;
-            guna2DateTimePicker3.Value = new DateTime(2024, 12, 9, 22, 45, 16, 15);
+            dtpDeliveryDate.Checked = true;
+            dtpDeliveryDate.CustomizableEdges = customizableEdges5;
+            dtpDeliveryDate.FillColor = Color.White;
+            dtpDeliveryDate.Font = new Font("Segoe UI", 9F);
+            dtpDeliveryDate.Format = DateTimePickerFormat.Long;
+            dtpDeliveryDate.Location = new Point(24, 260);
+            dtpDeliveryDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpDeliveryDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpDeliveryDate.Name = "dtpDeliveryDate";
+            dtpDeliveryDate.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            dtpDeliveryDate.Size = new Size(200, 21);
+            dtpDeliveryDate.TabIndex = 7;
+            dtpDeliveryDate.Value = new DateTime(2024, 12, 9, 22, 45, 16, 15);
             // 
-            // guna2TextBox1
+            // txtQuantity
             // 
-            guna2TextBox1.BorderRadius = 10;
-            guna2TextBox1.CustomizableEdges = customizableEdges7;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(238, 85);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox1.Size = new Size(99, 36);
-            guna2TextBox1.TabIndex = 8;
-            // 
-            // guna2TextBox2
-            // 
-            guna2TextBox2.BorderRadius = 10;
-            guna2TextBox2.CustomizableEdges = customizableEdges9;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(23, 85);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox2.Size = new Size(201, 36);
-            guna2TextBox2.TabIndex = 9;
+            txtQuantity.BorderRadius = 10;
+            txtQuantity.CustomizableEdges = customizableEdges7;
+            txtQuantity.DefaultText = "";
+            txtQuantity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtQuantity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtQuantity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtQuantity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtQuantity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQuantity.Font = new Font("Segoe UI", 9F);
+            txtQuantity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQuantity.Location = new Point(238, 85);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.PasswordChar = '\0';
+            txtQuantity.PlaceholderText = "";
+            txtQuantity.SelectedText = "";
+            txtQuantity.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtQuantity.Size = new Size(99, 36);
+            txtQuantity.TabIndex = 8;
             // 
             // btnAdd
             // 
             btnAdd.BackColor = Color.Transparent;
             btnAdd.BorderColor = Color.Transparent;
             btnAdd.BorderRadius = 10;
-            btnAdd.CustomizableEdges = customizableEdges11;
+            btnAdd.CustomizableEdges = customizableEdges9;
             btnAdd.DisabledState.BorderColor = Color.DarkGray;
             btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -203,28 +182,47 @@
             btnAdd.ForeColor = Color.Black;
             btnAdd.Location = new Point(164, 320);
             btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnAdd.Size = new Size(111, 33);
             btnAdd.TabIndex = 10;
             btnAdd.Text = "Stock In";
             btnAdd.Click += btnAdd_Click;
+            // 
+            // cmbProductName
+            // 
+            cmbProductName.BackColor = Color.Transparent;
+            cmbProductName.BorderRadius = 10;
+            cmbProductName.CustomizableEdges = customizableEdges11;
+            cmbProductName.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbProductName.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbProductName.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbProductName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbProductName.Font = new Font("Segoe UI", 10F);
+            cmbProductName.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbProductName.ItemHeight = 30;
+            cmbProductName.Location = new Point(23, 85);
+            cmbProductName.Name = "cmbProductName";
+            cmbProductName.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cmbProductName.Size = new Size(201, 36);
+            cmbProductName.TabIndex = 11;
             // 
             // AddDeliveryLogs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(442, 390);
+            Controls.Add(cmbProductName);
             Controls.Add(btnAdd);
-            Controls.Add(guna2TextBox2);
-            Controls.Add(guna2TextBox1);
-            Controls.Add(guna2DateTimePicker3);
-            Controls.Add(guna2DateTimePicker2);
-            Controls.Add(guna2DateTimePicker1);
+            Controls.Add(txtQuantity);
+            Controls.Add(dtpDeliveryDate);
+            Controls.Add(dtpEXPDate);
+            Controls.Add(dtpMFGDate);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "AddDeliveryLogs";
             Text = "AddDeliveryLogs";
             ResumeLayout(false);
@@ -238,11 +236,11 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpMFGDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpEXPDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDeliveryDate;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbProductName;
     }
 }

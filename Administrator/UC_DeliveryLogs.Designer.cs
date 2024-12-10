@@ -39,7 +39,6 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             btnArchived = new Guna.UI2.WinForms.Guna2Button();
-            btnSearch = new Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dtgDeliveryLogs).BeginInit();
             SuspendLayout();
@@ -111,16 +110,6 @@
             btnArchived.TabIndex = 9;
             btnArchived.Text = "Archived";
             // 
-            // btnSearch
-            // 
-            btnSearch.Location = new Point(1078, 561);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(75, 23);
-            btnSearch.TabIndex = 10;
-            btnSearch.Text = "Add";
-            btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click_1;
-            // 
             // guna2Button1
             // 
             guna2Button1.BorderRadius = 10;
@@ -133,19 +122,19 @@
             guna2Button1.FillColor = Color.LightGray;
             guna2Button1.Font = new Font("Segoe UI", 9F);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(956, 561);
+            guna2Button1.Location = new Point(1037, 552);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button1.Size = new Size(116, 32);
             guna2Button1.TabIndex = 11;
             guna2Button1.Text = "Add";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // UC_DeliveryLogs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2Button1);
-            Controls.Add(btnSearch);
             Controls.Add(btnArchived);
             Controls.Add(txtSearchBar);
             Controls.Add(guna2HtmlLabel1);
@@ -165,7 +154,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchBar;
         private Guna.UI2.WinForms.Guna2Button btnArchived;
-        private Button btnSearch;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

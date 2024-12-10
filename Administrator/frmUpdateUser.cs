@@ -11,13 +11,15 @@ using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Xml.Linq;
+using static Azure.Core.HttpHeader;
+using Guna.UI2.WinForms;
 
 namespace Administrator
 {
     public partial class frmUpdateUser : Form
     {
         private int userId;
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\legas\source\repos\Watchupong_Feeds_Inventory_Management_System\Administrator\WatchupongFeedsDB.mdf;Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\source\repos\Watchupong_Feeds_Inventory_Management_System\Administrator\WatchupongFeedsDB.mdf;Integrated Security=True";
         SqlCommand cmd = new SqlCommand();
         public frmUpdateUser()
         {
@@ -30,31 +32,35 @@ namespace Administrator
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT @name, @username, @password,@role FROM Account WHERE userid = @user_id", conn);
-                cmd.Parameters.AddWithValue("@user_id", userId);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+
+                // Retrieve the name
+                SqlCommand cmdName = new SqlCommand("SELECT name FROM Account WHERE user_id = @user_id", conn);
+                cmdName.Parameters.AddWithValue("@user_id", userId);
+                object nameObj = cmdName.ExecuteScalar();
+
+                if (nameObj != null)
                 {
-                    txtName.Text = reader["name"].ToString();
-                    txtUsername.Text = reader["username"].ToString();
-                    txtNewPassword.Text = reader["password"].ToString();
-                    cmbRole.Text = reader["role"].ToString();
+                    string name = nameObj.ToString();
+
+                    // Retrieve the remaining columns
+                    SqlCommand cmd = new SqlCommand("SELECT username, password, role FROM Account WHERE user_id = @user_id", conn);
+                    cmd.Parameters.AddWithValue("@user_id", userId);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        txtName.Text = name;
+                        txtUsername.Text = reader["username"].ToString();
+                        txtNewPassword.Text = reader["password"].ToString();
+                        cmbRole.Text = reader["role"].ToString();
+                    }
                 }
+
             }
         }
 
-    
-        private void rbShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbShowPassword.Checked)
-            {
-                txtReEnterPassword.UseSystemPasswordChar = !rbShowPassword.Checked; // Show password
-            }
-            else
-            {
-                txtReEnterPassword.UseSystemPasswordChar = !rbShowPassword.Checked; // Hide password
-            }
-        }
+
+
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
@@ -128,6 +134,23 @@ namespace Administrator
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2CheckBox1.Checked)
+            {
+                txtReEnterPassword.UseSystemPasswordChar = !guna2CheckBox1.Checked; // Show password
+            }
+            else
+            {
+                txtReEnterPassword.UseSystemPasswordChar = !guna2CheckBox1.Checked; // Hide password
+            }
         }
     }
 }

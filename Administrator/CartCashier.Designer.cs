@@ -330,6 +330,7 @@
             Controls.Add(btnDeduct);
             Controls.Add(btnAdd);
             Controls.Add(txtProductName);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "CartCashier";
             Text = "CartCashier";
             ResumeLayout(false);

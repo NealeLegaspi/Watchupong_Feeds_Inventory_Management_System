@@ -51,7 +51,7 @@
             guna2Button1.FillColor = Color.Black;
             guna2Button1.Font = new Font("Segoe UI", 9F);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(113, 407);
+            guna2Button1.Location = new Point(143, 407);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(87, 31);
@@ -70,7 +70,7 @@
             guna2Button2.FillColor = Color.Black;
             guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(220, 407);
+            guna2Button2.Location = new Point(246, 407);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button2.Size = new Size(87, 31);
@@ -86,7 +86,7 @@
             // 
             Reciept_txt.Location = new Point(12, 12);
             Reciept_txt.Name = "Reciept_txt";
-            Reciept_txt.Size = new Size(295, 379);
+            Reciept_txt.Size = new Size(321, 379);
             Reciept_txt.TabIndex = 15;
             Reciept_txt.Text = "";
             // 
