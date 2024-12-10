@@ -28,67 +28,29 @@ namespace Administrator
 
         private void txtDLSearchBar_TextChanged(object sender, EventArgs e)
         {
-            SearchData(txtSearchBar.Text);
+     
         }
 
         private void dtgDeliveryLogs_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-        private void LoadData()
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT delivery_id , p.product_name AS product_name , d.quantity, mfg_date, exp_date ,delivery_date FROM  DeliveryLogs as d \n" +
-                                   "INNER JOIN ProductList AS p on p.product_id = d.product_id" ;
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        dtgDeliveryLogs.DataSource = dt;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading data: " + ex.Message);
-                }
-            }
-        }
-        private void SearchData(string searchTerm)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT * FROM Inventory WHERE product_name LIKE @SearchTerm";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                        {
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
-                            dtgDeliveryLogs.DataSource = dt;
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error searching data: " + ex.Message);
-                }
-            }
-        }
+       
 
         private void UC_DeliveryLogs_Load(object sender, EventArgs e)
         {
-            LoadData();
+            WatchupongConnections.Instance.Open();
+            var adapter = WatchupongConnections.Instance.ExecuteAdapter
+                ("SELECT delivery_id, P.product_name, D.quantity, D.delivery_date FROM DeliveryLogs AS D \n" +
+                "INNER JOIN ProductList AS P ON P.product_id = D.product_id");
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dtgDeliveryLogs.DataSource = dt;
+            WatchupongConnections.Instance.Close();
+
         }
 
-    
+
 
         private void btnArchived_Click(object sender, EventArgs e)
         {

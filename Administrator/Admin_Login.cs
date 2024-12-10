@@ -24,7 +24,7 @@ namespace Administrator
                 }
                 else
                 {
-                    UC_Home_Cashier uC = new UC_Home_Cashier();
+                    Cashier_Dashboard uC = new Cashier_Dashboard();
                     uC.Show();
                     this.Hide();
                 }

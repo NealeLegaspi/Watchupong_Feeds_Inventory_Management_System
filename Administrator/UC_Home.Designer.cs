@@ -28,36 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dtgOrderHistory = new DataGridView();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            dataGridView2 = new DataGridView();
+            dtgLowStocks = new DataGridView();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            dataGridView3 = new DataGridView();
+            dtgTopProduct = new DataGridView();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            orderHistory_Cashier1 = new OrderHistory_Cashier();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgOrderHistory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgLowStocks).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgTopProduct).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dtgOrderHistory
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(14, 366);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(677, 208);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dtgOrderHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgOrderHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgOrderHistory.Location = new Point(59, 365);
+            dtgOrderHistory.Margin = new Padding(3, 2, 3, 2);
+            dtgOrderHistory.Name = "dtgOrderHistory";
+            dtgOrderHistory.RowHeadersWidth = 51;
+            dtgOrderHistory.Size = new Size(1029, 208);
+            dtgOrderHistory.TabIndex = 0;
+            dtgOrderHistory.CellContentClick += dataGridView1_CellContentClick;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(14, 328);
+            guna2HtmlLabel1.Location = new Point(59, 328);
             guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(151, 34);
@@ -65,21 +64,22 @@
             guna2HtmlLabel1.Text = "Order History";
             guna2HtmlLabel1.Click += guna2HtmlLabel1_Click;
             // 
-            // dataGridView2
+            // dtgLowStocks
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(697, 148);
-            dataGridView2.Margin = new Padding(3, 2, 3, 2);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(452, 158);
-            dataGridView2.TabIndex = 2;
+            dtgLowStocks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgLowStocks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgLowStocks.Location = new Point(650, 103);
+            dtgLowStocks.Margin = new Padding(3, 2, 3, 2);
+            dtgLowStocks.Name = "dtgLowStocks";
+            dtgLowStocks.RowHeadersWidth = 51;
+            dtgLowStocks.Size = new Size(438, 245);
+            dtgLowStocks.TabIndex = 2;
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(697, 328);
+            guna2HtmlLabel2.Location = new Point(59, 63);
             guna2HtmlLabel2.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(136, 34);
@@ -87,21 +87,21 @@
             guna2HtmlLabel2.Text = "Top Product";
             guna2HtmlLabel2.Click += guna2HtmlLabel2_Click;
             // 
-            // dataGridView3
+            // dtgTopProduct
             // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(697, 366);
-            dataGridView3.Margin = new Padding(3, 2, 3, 2);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.Size = new Size(452, 208);
-            dataGridView3.TabIndex = 4;
+            dtgTopProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgTopProduct.Location = new Point(59, 104);
+            dtgTopProduct.Margin = new Padding(3, 2, 3, 2);
+            dtgTopProduct.Name = "dtgTopProduct";
+            dtgTopProduct.RowHeadersWidth = 51;
+            dtgTopProduct.Size = new Size(539, 208);
+            dtgTopProduct.TabIndex = 4;
             // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.Location = new Point(697, 110);
+            guna2HtmlLabel3.Location = new Point(742, 65);
             guna2HtmlLabel3.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(114, 34);
@@ -121,46 +121,36 @@
             guna2HtmlLabel4.Text = "Home";
             guna2HtmlLabel4.Click += guna2HtmlLabel4_Click;
             // 
-            // orderHistory_Cashier1
-            // 
-            orderHistory_Cashier1.Location = new Point(575, 69);
-            orderHistory_Cashier1.Name = "orderHistory_Cashier1";
-            orderHistory_Cashier1.RightToLeft = RightToLeft.No;
-            orderHistory_Cashier1.Size = new Size(1160, 598);
-            orderHistory_Cashier1.TabIndex = 7;
-            // 
             // UC_Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(orderHistory_Cashier1);
             Controls.Add(guna2HtmlLabel4);
             Controls.Add(guna2HtmlLabel3);
-            Controls.Add(dataGridView3);
+            Controls.Add(dtgTopProduct);
             Controls.Add(guna2HtmlLabel2);
-            Controls.Add(dataGridView2);
+            Controls.Add(dtgLowStocks);
             Controls.Add(guna2HtmlLabel1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dtgOrderHistory);
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Home";
             Size = new Size(1160, 598);
             Load += UC_Home_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgOrderHistory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgLowStocks).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgTopProduct).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dtgOrderHistory;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private DataGridView dataGridView2;
+        private DataGridView dtgLowStocks;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private DataGridView dataGridView3;
+        private DataGridView dtgTopProduct;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private OrderHistory_Cashier orderHistory_Cashier1;
     }
 }

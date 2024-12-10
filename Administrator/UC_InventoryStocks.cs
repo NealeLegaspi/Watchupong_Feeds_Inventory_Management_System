@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.Design.AxImporter;
 
 namespace Administrator
 {
@@ -23,7 +26,14 @@ namespace Administrator
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            LoadDataFromDatabase("SELECT * FROM Stocks");
+            WatchupongConnections.Instance.Open();
+            var adapter = WatchupongConnections.Instance.ExecuteAdapter
+                ("SELECT stocks_id, P.product_name, D.quantity, D.delivery_date FROM Stocks AS S\n" +
+                "INNER JOIN DeliveryLogs AS D ON D.delivery_id = S.delivery_id \n" +
+                "INNER JOIN ProductList AS P ON P.product_id = D.product_id");
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
         }
 
         private void btnProductList_Click(object sender, EventArgs e)
@@ -57,10 +67,9 @@ namespace Administrator
             frmAddProduct frmAddProduct = new frmAddProduct();
             frmAddProduct.ShowDialog();
         }
-
         private void UC_InventoryStocks_Load(object sender, EventArgs e)
         {
-            LoadDataFromDatabase("SELECT * FROM Stocks");
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

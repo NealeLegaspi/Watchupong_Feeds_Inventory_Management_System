@@ -51,11 +51,11 @@
             txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtReEnterPassword = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
+            txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             SuspendLayout();
             // 
             // guna2HtmlLabel7
@@ -195,29 +195,6 @@
             txtName.Size = new Size(357, 36);
             txtName.TabIndex = 23;
             // 
-            // txtUsername
-            // 
-            txtUsername.BorderRadius = 10;
-            txtUsername.CustomizableEdges = customizableEdges25;
-            txtUsername.DefaultText = "";
-            txtUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUsername.Font = new Font("Segoe UI", 9F);
-            txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUsername.Location = new Point(26, 170);
-            txtUsername.Name = "txtUsername";
-            txtUsername.PasswordChar = '●';
-            txtUsername.PlaceholderText = "";
-            txtUsername.SelectedText = "";
-            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            txtUsername.Size = new Size(357, 36);
-            txtUsername.TabIndex = 39;
-            txtUsername.UseSystemPasswordChar = true;
-            txtUsername.TextChanged += txtUsername_TextChanged;
-            // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
@@ -230,7 +207,7 @@
             // txtReEnterPassword
             // 
             txtReEnterPassword.BorderRadius = 10;
-            txtReEnterPassword.CustomizableEdges = customizableEdges27;
+            txtReEnterPassword.CustomizableEdges = customizableEdges25;
             txtReEnterPassword.DefaultText = "";
             txtReEnterPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtReEnterPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -244,7 +221,7 @@
             txtReEnterPassword.PasswordChar = '●';
             txtReEnterPassword.PlaceholderText = "";
             txtReEnterPassword.SelectedText = "";
-            txtReEnterPassword.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            txtReEnterPassword.ShadowDecoration.CustomizableEdges = customizableEdges26;
             txtReEnterPassword.Size = new Size(357, 36);
             txtReEnterPassword.TabIndex = 41;
             txtReEnterPassword.UseSystemPasswordChar = true;
@@ -276,16 +253,38 @@
             guna2CheckBox1.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
             guna2CheckBox1.CheckedChanged += guna2CheckBox1_CheckedChanged;
             // 
+            // txtUsername
+            // 
+            txtUsername.BorderRadius = 10;
+            txtUsername.CustomizableEdges = customizableEdges27;
+            txtUsername.DefaultText = "";
+            txtUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUsername.Font = new Font("Segoe UI", 9F);
+            txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUsername.Location = new Point(30, 170);
+            txtUsername.Name = "txtUsername";
+            txtUsername.PasswordChar = '\0';
+            txtUsername.PlaceholderText = "";
+            txtUsername.SelectedText = "";
+            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            txtUsername.Size = new Size(357, 36);
+            txtUsername.TabIndex = 44;
+            txtUsername.TextChanged += txtusername_TextChanged_1;
+            // 
             // frmUpdateUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(418, 497);
+            Controls.Add(txtUsername);
             Controls.Add(guna2CheckBox1);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(txtReEnterPassword);
             Controls.Add(guna2HtmlLabel2);
-            Controls.Add(txtUsername);
             Controls.Add(guna2HtmlLabel7);
             Controls.Add(btnConfirm);
             Controls.Add(btnCancel);
@@ -314,10 +313,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNewPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtReEnterPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
     }
 }

@@ -26,9 +26,12 @@ namespace Administrator
                 var query = WatchupongConnections.Instance.CreateCommand
                     ("BEGIN \n" +
                     "   BEGIN TRANSACTION \n" +
+                    "       DECLARE @dlid AS INT \n" +
+                    "       SET @dlid = (SELECT COUNT(delivery_id) FROM DeliveryLogs) + 1" +
                     "       UPDATE ProductList SET quantity = quantity + @quantity WHERE product_id = @product_id \n" +
                     "       INSERT INTO DeliveryLogs \n" +
-                    "       VALUES((SELECT COUNT(delivery_id) FROM DeliveryLogs) + 1, @product_id, @quantity, @mfg_date, @exp_date, @delivery_date)\n " +
+                    "       VALUES(@dlid, @product_id, @quantity, @mfg_date, @exp_date, @delivery_date)\n " +
+                    "       INSERT INTO Stocks VALUES((SELECT COUNT(stocks_id) FROM Stocks) + 1,@dlid, @product_id, 'Good', @delivery_date )" +
                     "   COMMIT \n" +
                     "END");
                 query.Parameters.AddWithValue("@quantity", Convert.ToInt32(txtQuantity.Text));

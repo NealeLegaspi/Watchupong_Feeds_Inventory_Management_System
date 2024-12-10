@@ -58,7 +58,7 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = SystemColors.ActiveBorder;
-            guna2Panel1.BorderRadius = 20;
+            guna2Panel1.BorderRadius = 30;
             guna2Panel1.Controls.Add(guna2Button3);
             guna2Panel1.Controls.Add(guna2Button2);
             guna2Panel1.Controls.Add(guna2Button1);
@@ -80,7 +80,7 @@
             guna2Button3.FillColor = Color.WhiteSmoke;
             guna2Button3.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold);
             guna2Button3.ForeColor = Color.Black;
-            guna2Button3.Location = new Point(271, 371);
+            guna2Button3.Location = new Point(272, 357);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button3.Size = new Size(423, 53);
@@ -89,7 +89,6 @@
             // 
             // guna2Button2
             // 
-            guna2Button2.BorderRadius = 10;
             guna2Button2.CustomizableEdges = customizableEdges3;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -100,16 +99,15 @@
             guna2Button2.ForeColor = Color.White;
             guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
             guna2Button2.ImageSize = new Size(150, 150);
-            guna2Button2.Location = new Point(517, 63);
+            guna2Button2.Location = new Point(556, 80);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(273, 259);
+            guna2Button2.Size = new Size(221, 199);
             guna2Button2.TabIndex = 1;
             // 
             // guna2Button1
             // 
             guna2Button1.BackColor = Color.White;
-            guna2Button1.BorderRadius = 10;
             guna2Button1.CustomizableEdges = customizableEdges5;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -120,11 +118,12 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Image = (Image)resources.GetObject("guna2Button1.Image");
             guna2Button1.ImageSize = new Size(150, 150);
-            guna2Button1.Location = new Point(178, 63);
+            guna2Button1.Location = new Point(204, 80);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(228, 259);
+            guna2Button1.Size = new Size(209, 199);
             guna2Button1.TabIndex = 0;
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // UC_Account_Cashier
             // 

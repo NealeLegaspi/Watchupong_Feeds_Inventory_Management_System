@@ -152,5 +152,10 @@ namespace Administrator
                 txtReEnterPassword.UseSystemPasswordChar = !guna2CheckBox1.Checked; // Hide password
             }
         }
+
+        private void txtusername_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

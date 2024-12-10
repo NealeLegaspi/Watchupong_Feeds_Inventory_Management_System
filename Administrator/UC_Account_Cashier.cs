@@ -16,5 +16,12 @@ namespace Administrator
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            ViewProfile viewProfile = new ViewProfile();  
+            viewProfile.ShowDialog();
+
+        }
     }
 }
