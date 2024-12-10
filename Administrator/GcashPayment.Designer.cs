@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GcashPayment));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -48,6 +48,8 @@
             txtAccountName = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            label5 = new Label();
+            lblGcashAmount = new Label();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -83,7 +85,7 @@
             // 
             // btnPay
             // 
-            btnPay.CustomizableEdges = customizableEdges1;
+            btnPay.CustomizableEdges = customizableEdges11;
             btnPay.DisabledState.BorderColor = Color.DarkGray;
             btnPay.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPay.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -93,7 +95,7 @@
             btnPay.ForeColor = Color.White;
             btnPay.Location = new Point(124, 399);
             btnPay.Name = "btnPay";
-            btnPay.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnPay.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnPay.Size = new Size(133, 41);
             btnPay.TabIndex = 8;
             btnPay.Text = "Pay";
@@ -102,7 +104,7 @@
             // txtAmount
             // 
             txtAmount.BorderColor = Color.Black;
-            txtAmount.CustomizableEdges = customizableEdges3;
+            txtAmount.CustomizableEdges = customizableEdges13;
             txtAmount.DefaultText = "";
             txtAmount.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtAmount.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -116,14 +118,14 @@
             txtAmount.PasswordChar = '\0';
             txtAmount.PlaceholderText = "";
             txtAmount.SelectedText = "";
-            txtAmount.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtAmount.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtAmount.Size = new Size(229, 33);
             txtAmount.TabIndex = 7;
             // 
             // txtAccountNo
             // 
             txtAccountNo.BorderColor = Color.Black;
-            txtAccountNo.CustomizableEdges = customizableEdges5;
+            txtAccountNo.CustomizableEdges = customizableEdges15;
             txtAccountNo.DefaultText = "";
             txtAccountNo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtAccountNo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -137,7 +139,7 @@
             txtAccountNo.PasswordChar = '\0';
             txtAccountNo.PlaceholderText = "";
             txtAccountNo.SelectedText = "";
-            txtAccountNo.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtAccountNo.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtAccountNo.Size = new Size(229, 33);
             txtAccountNo.TabIndex = 12;
             // 
@@ -145,7 +147,7 @@
             // 
             txtAccountName.BackColor = SystemColors.Desktop;
             txtAccountName.BorderColor = Color.Black;
-            txtAccountName.CustomizableEdges = customizableEdges7;
+            txtAccountName.CustomizableEdges = customizableEdges17;
             txtAccountName.DefaultText = "";
             txtAccountName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtAccountName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -159,7 +161,7 @@
             txtAccountName.PasswordChar = '\0';
             txtAccountName.PlaceholderText = "";
             txtAccountName.SelectedText = "";
-            txtAccountName.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtAccountName.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtAccountName.Size = new Size(229, 33);
             txtAccountName.TabIndex = 14;
             // 
@@ -175,18 +177,37 @@
             // 
             // guna2PictureBox2
             // 
-            guna2PictureBox2.CustomizableEdges = customizableEdges9;
+            guna2PictureBox2.CustomizableEdges = customizableEdges19;
             guna2PictureBox2.ErrorImage = null;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageLocation = "";
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(12, 15);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2PictureBox2.Size = new Size(68, 40);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox2.TabIndex = 17;
             guna2PictureBox2.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(203, 334);
+            label5.Name = "label5";
+            label5.Size = new Size(88, 17);
+            label5.TabIndex = 18;
+            label5.Text = "Total Amount:";
+            // 
+            // lblGcashAmount
+            // 
+            lblGcashAmount.AutoSize = true;
+            lblGcashAmount.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblGcashAmount.Location = new Point(289, 334);
+            lblGcashAmount.Name = "lblGcashAmount";
+            lblGcashAmount.Size = new Size(0, 17);
+            lblGcashAmount.TabIndex = 19;
             // 
             // GcashPayment
             // 
@@ -194,6 +215,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(389, 466);
+            Controls.Add(lblGcashAmount);
+            Controls.Add(label5);
             Controls.Add(guna2PictureBox2);
             Controls.Add(txtAccountName);
             Controls.Add(label4);
@@ -223,5 +246,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAccountName;
         private Label label4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Label label5;
+        private Label lblGcashAmount;
     }
 }

@@ -225,6 +225,7 @@
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "AddDeliveryLogs";
             Text = "AddDeliveryLogs";
+            Load += AddDeliveryLogs_Load;
             ResumeLayout(false);
             PerformLayout();
         }

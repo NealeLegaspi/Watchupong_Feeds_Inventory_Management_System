@@ -35,6 +35,7 @@
             dataGridView3 = new DataGridView();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            orderHistory_Cashier1 = new OrderHistory_Cashier();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -120,10 +121,19 @@
             guna2HtmlLabel4.Text = "Home";
             guna2HtmlLabel4.Click += guna2HtmlLabel4_Click;
             // 
+            // orderHistory_Cashier1
+            // 
+            orderHistory_Cashier1.Location = new Point(575, 69);
+            orderHistory_Cashier1.Name = "orderHistory_Cashier1";
+            orderHistory_Cashier1.RightToLeft = RightToLeft.No;
+            orderHistory_Cashier1.Size = new Size(1160, 598);
+            orderHistory_Cashier1.TabIndex = 7;
+            // 
             // UC_Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(orderHistory_Cashier1);
             Controls.Add(guna2HtmlLabel4);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(dataGridView3);
@@ -151,5 +161,6 @@
         private DataGridView dataGridView3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private OrderHistory_Cashier orderHistory_Cashier1;
     }
 }

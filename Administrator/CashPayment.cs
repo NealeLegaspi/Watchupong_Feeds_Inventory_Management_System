@@ -41,6 +41,7 @@ namespace Administrator
                 query.Parameters.AddWithValue("@amount", totalamoubt);
                 query.Parameters.AddWithValue("@date", DateTime.Now.ToString("MM/dd/yyyy"));
                 query.ExecuteNonQuery();
+                AuditQuery.Instance.InsertAudit("Insert new payment");
                 InsertProductId();
                 cash.ShowDialog();
             }
@@ -60,6 +61,7 @@ namespace Administrator
                 query.Parameters.AddWithValue("@amount", amountItems);
                 query.Parameters.AddWithValue("@date", DateTime.Now.ToString("MM/dd/yyyy"));
                 query.ExecuteNonQuery();
+                AuditQuery.Instance.InsertAudit("Insert new payment");
                 InsertProductId();
                 cash.ShowDialog();
                 this.Close();
@@ -90,6 +92,7 @@ namespace Administrator
                 query.Parameters.AddWithValue("@quan", ProductListItems.Instace.getInt(ProductListItems.Instace.getId(x)));
                 query.Parameters.AddWithValue("@price", ProductListItems.Instace.getPrice(ProductListItems.Instace.getId(x)));
                 query.ExecuteNonQuery();
+                AuditQuery.Instance.UpdateAudit("Decrease product");
             }
         }
 

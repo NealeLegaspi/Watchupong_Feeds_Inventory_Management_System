@@ -20,85 +20,54 @@ namespace Administrator
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\source\repos\Watchupong_Feeds_Inventory_Management_System\Administrator\WatchupongFeedsDB.mdf;Integrated Security=True";
-
-
-            try
+            if (txtQuantity.Text != "" && cmbProductName.SelectedIndex != -1 && dtpEXPDate.Value > dtpMFGDate.Value)
             {
-                // Collect data from the form fields
-                string productName = cmbProductName.Text.Trim(); // Product Name from user input
-                int quantity = int.Parse(txtQuantity.Text.Trim()); // Quantity from user input
-                string deliveryDate = dtpDeliveryDate.Value.ToString("yyyy-MM-dd"); // Delivery Date
-                string manufacturingDate = dtpMFGDate.Value.ToString("yyyy-MM-dd"); // Manufacturing Date
-                string expirationDate = dtpEXPDate.Value.ToString("yyyy-MM-dd"); // Expiration Date
+                WatchupongConnections.Instance.Open();
+                var query = WatchupongConnections.Instance.CreateCommand
+                    ("BEGIN \n" +
+                    "   BEGIN TRANSACTION \n" +
+                    "       UPDATE ProductList SET quantity = quantity + @quantity WHERE product_id = @product_id \n" +
+                    "       INSERT INTO DeliveryLogs \n" +
+                    "       VALUES((SELECT COUNT(delivery_id) FROM DeliveryLogs) + 1, @product_id, @quantity, @mfg_date, @exp_date, @delivery_date)\n " +
+                    "   COMMIT \n" +
+                    "END");
+                query.Parameters.AddWithValue("@quantity", Convert.ToInt32(txtQuantity.Text));
+                query.Parameters.AddWithValue("@product_id", cmbProductName.Text.Split('-')[0]);
+                query.Parameters.AddWithValue("@delivery_date", dtpDeliveryDate.Value);
+                query.Parameters.AddWithValue("@mfg_date", dtpMFGDate.Value);
+                query.Parameters.AddWithValue("@exp_date", dtpEXPDate.Value);
+                query.ExecuteNonQuery();
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    SqlTransaction transaction = connection.BeginTransaction();
-
-                    try
-                    {
-                        // Step 1: Retrieve product_id based on product_name
-                        string getProductIDQuery = @"
-                    SELECT product_id 
-                    FROM ProductList
-                    WHERE product_name = @product_name";
-
-                        int productId;
-                        using (SqlCommand cmd = new SqlCommand(getProductIDQuery, connection, transaction))
-                        {
-                            cmd.Parameters.AddWithValue("@product_name", productName);
-                            object result = cmd.ExecuteScalar();
-                            if (result == null)
-                            {
-                                throw new Exception("Product not found in the database.");
-                            }
-                            productId = (int)result;
-                        }
-
-                        // Step 2: Insert into DeliveryLogs using the retrieved product_id
-                        string insertDeliveryLogQuery = @"
-                    INSERT INTO DeliveryLogs (delivery_id, product_id, quantity, delivery_date, mfg_date, exp_date)
-                    VALUES ((SELECT CONT(delivery_id) FROM DeliveryLogs) + 1, @product_id, @quantity, @delivery_date, @mfg_date, @exp_date)";
-
-                        using (SqlCommand cmd = new SqlCommand(insertDeliveryLogQuery, connection, transaction))
-                        {
-                            cmd.Parameters.AddWithValue("@product_id", productId);
-                            cmd.Parameters.AddWithValue("@quantity", quantity);
-                            cmd.Parameters.AddWithValue("@delivery_date", deliveryDate);
-                            cmd.Parameters.AddWithValue("@mfg_date", manufacturingDate);
-                            cmd.Parameters.AddWithValue("@exp_date", expirationDate);
-                            cmd.ExecuteNonQuery();
-                        }
-
-                        // Commit the transaction
-                        transaction.Commit();
-                        MessageBox.Show("Delivery log added successfully.");
-                    }
-                    catch (Exception ex)
-                    {
-                        // Rollback the transaction on error
-                        transaction.Rollback();
-                        MessageBox.Show("An error occurred: " + ex.Message);
-                    }
-                }
+                AuditQuery.Instance.UpdateAudit("Increase quantity product");
+                WatchupongConnections.Instance.Close();
+                MessageBox.Show("Added Successfully");
+                txtQuantity.Clear();
+                cmbProductName.SelectedIndex = -1;
+                this.Close();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Database connection error: " + ex.Message);
+                MessageBox.Show("Fill up all fileds", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+
         }
         public void comboProduct()
         {
             WatchupongConnections.Instance.Open();
             var reader = WatchupongConnections.Instance.ExecuteReader
-                ("SELECT CONCAT(product_id, '-', product_name) FROM ProductList WHERE status != 0");
+                ("SELECT CONCAT(product_id, '-', product_name) FROM ProductList WHERE status = 0");
             while (reader.Read())
             {
-
+                cmbProductName.Items.Add(reader.GetValue(0));
             }
+            reader.Close();
+            WatchupongConnections.Instance.Close();
+        }
+
+        private void AddDeliveryLogs_Load(object sender, EventArgs e)
+        {
+            comboProduct();
         }
     }
 }

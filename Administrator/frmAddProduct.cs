@@ -48,8 +48,8 @@ namespace Administrator
             }
 
             var sqlcomm = WatchupongConnections.Instance.CreateCommand(
-                "INSERT INTO ProductList (product_name, quantity, price, product_image, description) " +
-                "VALUES (@product_name, @quantity, @price, @product_image, @description)");
+                "INSERT INTO ProductList (product_name, quantity, price, product_image, description, status) " +
+                "VALUES (@product_name, @quantity, @price, @product_image, @description, 0)");
 
             sqlcomm.Parameters.AddWithValue("@product_name", txtproductname.Text);
             sqlcomm.Parameters.AddWithValue("@quantity", Convert.ToInt32(txtQuantity.Text));
@@ -59,6 +59,7 @@ namespace Administrator
 
             sqlcomm.ExecuteNonQuery();
 
+            AuditQuery.Instance.InsertAudit(" Added new product");
          
             txtPrice.Clear();
             txtproductname.Clear();

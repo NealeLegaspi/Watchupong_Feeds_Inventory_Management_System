@@ -47,6 +47,7 @@ namespace Administrator
             WatchupongConnections.Instance.Open();
 
             query.ExecuteNonQuery();
+            AuditQuery.Instance.InsertAudit(" Added new user");
             WatchupongConnections.Instance.Close();
 
             adduser?.Invoke(this, e);

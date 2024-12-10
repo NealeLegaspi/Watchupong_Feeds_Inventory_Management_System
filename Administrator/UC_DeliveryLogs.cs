@@ -42,7 +42,8 @@ namespace Administrator
                 try
                 {
                     conn.Open();
-                    string query = "SELECT delivery_id , product_id AS product_name , quantity, mfg_date, exp_date ,delivery_date FROM DeliveryLogs";
+                    string query = "SELECT delivery_id , p.product_name AS product_name , d.quantity, mfg_date, exp_date ,delivery_date FROM  DeliveryLogs as d \n" +
+                                   "INNER JOIN ProductList AS p on p.product_id = d.product_id" ;
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
                     {
                         DataTable dt = new DataTable();

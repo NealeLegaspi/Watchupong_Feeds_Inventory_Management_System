@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GcashReceipt));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label3 = new Label();
             label1 = new Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -69,14 +69,14 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges1;
+            guna2PictureBox1.CustomizableEdges = customizableEdges9;
             guna2PictureBox1.ErrorImage = null;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageLocation = "";
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(12, 18);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2PictureBox1.Size = new Size(68, 40);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 16;
@@ -96,7 +96,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(12, 222);
+            label4.Location = new Point(12, 217);
             label4.Name = "label4";
             label4.Size = new Size(110, 20);
             label4.TabIndex = 18;
@@ -106,7 +106,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(12, 276);
+            label5.Location = new Point(15, 276);
             label5.Name = "label5";
             label5.Size = new Size(65, 20);
             label5.TabIndex = 19;
@@ -115,7 +115,7 @@
             // lblRefNumber
             // 
             lblRefNumber.AutoSize = true;
-            lblRefNumber.Location = new Point(316, 117);
+            lblRefNumber.Location = new Point(185, 117);
             lblRefNumber.Name = "lblRefNumber";
             lblRefNumber.Size = new Size(0, 15);
             lblRefNumber.TabIndex = 20;
@@ -123,7 +123,7 @@
             // lblAccountNo
             // 
             lblAccountNo.AutoSize = true;
-            lblAccountNo.Location = new Point(316, 170);
+            lblAccountNo.Location = new Point(185, 170);
             lblAccountNo.Name = "lblAccountNo";
             lblAccountNo.Size = new Size(0, 15);
             lblAccountNo.TabIndex = 21;
@@ -131,7 +131,7 @@
             // lblAccountName
             // 
             lblAccountName.AutoSize = true;
-            lblAccountName.Location = new Point(316, 222);
+            lblAccountName.Location = new Point(185, 222);
             lblAccountName.Name = "lblAccountName";
             lblAccountName.Size = new Size(0, 15);
             lblAccountName.TabIndex = 22;
@@ -139,14 +139,14 @@
             // lblAmount
             // 
             lblAmount.AutoSize = true;
-            lblAmount.Location = new Point(316, 281);
+            lblAmount.Location = new Point(185, 281);
             lblAmount.Name = "lblAmount";
             lblAmount.Size = new Size(0, 15);
             lblAmount.TabIndex = 23;
             // 
             // btnReceipt
             // 
-            btnReceipt.CustomizableEdges = customizableEdges3;
+            btnReceipt.CustomizableEdges = customizableEdges11;
             btnReceipt.DisabledState.BorderColor = Color.DarkGray;
             btnReceipt.DisabledState.CustomBorderColor = Color.DarkGray;
             btnReceipt.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -156,7 +156,7 @@
             btnReceipt.ForeColor = Color.White;
             btnReceipt.Location = new Point(143, 380);
             btnReceipt.Name = "btnReceipt";
-            btnReceipt.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnReceipt.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnReceipt.Size = new Size(102, 49);
             btnReceipt.TabIndex = 25;
             btnReceipt.Text = "Receipt";
@@ -179,9 +179,11 @@
             Controls.Add(guna2PictureBox1);
             Controls.Add(label1);
             Controls.Add(label3);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "GcashReceipt";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "GcashReceipt";
+            Load += GcashReceipt_Load;
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

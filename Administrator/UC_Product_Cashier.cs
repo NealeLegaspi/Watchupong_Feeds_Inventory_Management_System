@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,6 +51,7 @@ namespace Administrator
         private void btnGcash_Click(object sender, EventArgs e)
         {
             GcashPayment gcash = new GcashPayment();
+            gcash.getotalAmount = Convert.ToDecimal(Amount.Text);
             gcash.ShowDialog();
 
 

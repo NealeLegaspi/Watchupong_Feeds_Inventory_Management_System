@@ -34,12 +34,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GcashReceipt2));
             Reciept_txt = new RichTextBox();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             btnHome = new Guna.UI2.WinForms.Guna2Button();
             btnPrint = new Guna.UI2.WinForms.Guna2Button();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
@@ -72,28 +69,10 @@
             guna2Button2.TabIndex = 17;
             guna2Button2.Text = "Home";
             // 
-            // guna2Button1
-            // 
-            guna2Button1.BorderRadius = 6;
-            guna2Button1.CustomizableEdges = customizableEdges3;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Black;
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(354, 407);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(87, 31);
-            guna2Button1.TabIndex = 16;
-            guna2Button1.Text = "Print";
-            // 
             // btnHome
             // 
             btnHome.BorderRadius = 6;
-            btnHome.CustomizableEdges = customizableEdges5;
+            btnHome.CustomizableEdges = customizableEdges3;
             btnHome.DisabledState.BorderColor = Color.DarkGray;
             btnHome.DisabledState.CustomBorderColor = Color.DarkGray;
             btnHome.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -103,15 +82,16 @@
             btnHome.ForeColor = Color.White;
             btnHome.Location = new Point(246, 407);
             btnHome.Name = "btnHome";
-            btnHome.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnHome.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnHome.Size = new Size(87, 31);
             btnHome.TabIndex = 20;
             btnHome.Text = "Home";
+            btnHome.Click += btnHome_Click;
             // 
             // btnPrint
             // 
             btnPrint.BorderRadius = 6;
-            btnPrint.CustomizableEdges = customizableEdges7;
+            btnPrint.CustomizableEdges = customizableEdges5;
             btnPrint.DisabledState.BorderColor = Color.DarkGray;
             btnPrint.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPrint.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -121,7 +101,7 @@
             btnPrint.ForeColor = Color.White;
             btnPrint.Location = new Point(143, 407);
             btnPrint.Name = "btnPrint";
-            btnPrint.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnPrint.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPrint.Size = new Size(87, 31);
             btnPrint.TabIndex = 19;
             btnPrint.Text = "Print";
@@ -146,7 +126,6 @@
             Controls.Add(btnPrint);
             Controls.Add(Reciept_txt);
             Controls.Add(guna2Button2);
-            Controls.Add(guna2Button1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "GcashReceipt2";
             Text = "GcashReceipt2";
@@ -158,7 +137,6 @@
 
         private RichTextBox Reciept_txt;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Button btnPrint;
         private System.Drawing.Printing.PrintDocument printDocument1;

@@ -31,7 +31,8 @@ namespace Administrator
                     conn.Open();
 
                     // Basic query
-                    string query = "SELECT actions, created_at FROM Audit";
+                    string query = "SELECT audit_id, A.name, actions, created_at FROM Audit AS AU \n" +
+                        "INNER JOIN Account AS A ON A.user_id = AU.user_id";
 
                     // Add search filter if necessary
                     if (!string.IsNullOrEmpty(searchQuery))
@@ -66,7 +67,10 @@ namespace Administrator
 
         private void UC_Audit_Load(object sender, EventArgs e)
         {
+            AuditQuery.Instance.ShowAudit(dtgAudit);
+            LoadAuditLogs();
 
+            FormatDataGridViewColumns();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -84,6 +88,14 @@ namespace Administrator
         {
             get { return id; }
             set { id = value; }
+        }
+        private void FormatDataGridViewColumns()
+        {
+            // Set the display index for each column
+        //dtgAudit.Columns.Add("audit_id", "Audit ID");
+           // dtgAudit.Columns.Add("name", "Name");
+           // dtgAudit.Columns.Add("actions", "Actions");
+           // dtgAudit.Columns.Add("created_at", "Created At");
         }
     }
 }

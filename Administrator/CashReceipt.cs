@@ -33,26 +33,31 @@ namespace Administrator
             Reciept_txt.Text += "";
 
             Reciept_txt.Text += $" ProductName                  Quantity                   Price\n";
-           for (int i = 0; i < ProductListItems.Instace.getCount(); i++)
-{
-    WatchupongConnections.Instance.Open();
-    var reader = WatchupongConnections.Instance.ExecuteReader($"SELECT product_name FROM ProductList WHERE product_id = {ProductListItems.Instace.getId(i)}");
 
-    if (reader.Read())
-    {
-        string p = reader.GetString(0);
-        int q = ProductListItems.Instace.getInt(ProductListItems.Instace.getId(i));
-        int pr = ProductListItems.Instace.getInt(ProductListItems.Instace.getId(i));
+            for (int i = 0; i < ProductListItems.Instace.getCount(); i++)
+            {
+                WatchupongConnections.Instance.Open();
+                var reader = WatchupongConnections.Instance.ExecuteReader($"SELECT product_name FROM ProductList WHERE product_id = {ProductListItems.Instace.getId(i)}");
 
-        // Format the product information as a string
-        string productLine = $"{p,20} {q,17} {pr,30}";
+                if (reader.Read())
+                {
+                    string p = reader.GetString(0);
+                    int q = ProductListItems.Instace.getInt(ProductListItems.Instace.getId(i));
+                    int pr = ProductListItems.Instace.getInt(ProductListItems.Instace.getId(i));
 
-        Reciept_txt.Text += productLine + "\n";
-    }
+                    // Format the product information as a string
+                    string productLine = $"{p,20} {q,17} {pr,30}";
 
-    reader.Close();
-    WatchupongConnections.Instance.Close();
-}
+                    Reciept_txt.Text += productLine + "\n";
+                }
+
+                reader.Close();
+                WatchupongConnections.Instance.Close();
+
+            }
+            Reciept_txt.Text += "---------------------------------------------------------\n";
+            Reciept_txt.Text += "Thank you for your purchase! Have a great day!\n";
+            Reciept_txt.Text += "---------------------------------------------------------\n";
 
         }
 

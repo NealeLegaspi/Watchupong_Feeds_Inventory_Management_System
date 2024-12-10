@@ -32,6 +32,10 @@ namespace Administrator
             Reciept_txt.Text += "";
 
             Reciept_txt.Text += $" ProductName                  Quantity                   Price\n";
+            Reciept_txt.Text += "---------------------------------------------------------\n";
+            Reciept_txt.Text += "Thank you for your purchase! Have a great day!\n";
+            Reciept_txt.Text += "---------------------------------------------------------\n";
+
             for (int i = 0; i < ProductListItems.Instace.getCount(); i++)
             {
                 WatchupongConnections.Instance.Open();
@@ -49,7 +53,14 @@ namespace Administrator
                     Reciept_txt.Text += productLine + "\n";
                 }
 
+                reader.Close();
+                WatchupongConnections.Instance.Close();
+
             }
+            Reciept_txt.Text += "---------------------------------------------------------\n";
+            Reciept_txt.Text += "Thank you for your purchase! Have a great day!\n";
+            Reciept_txt.Text += "---------------------------------------------------------\n";
+
         }
 
         private void GcashReceipt2_Load(object sender, EventArgs e)
@@ -66,6 +77,16 @@ namespace Administrator
         {
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.ShowDialog();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Cashier_Process.Instance.ClearItems();
+            Cashier_Process.Instance.ProductShow();
+            ProductListItems.Instace.clearItems();
+            ProductListItems.Instace.clearquan();
+            ProductListItems.Instace.ClearPrice();
+            this.Hide();
         }
     }
 }
